@@ -1,34 +1,11 @@
 <!DOCTYPE html>
 <html>
+    <?php include 'head.php';?>
     <head>
-        <meta charset="UTF-8">
- 
-        <!-- If IE use the latest rendering engine -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
- 
-        <!-- Set the page to the width of the device and set the zoon level -->
-        <meta name="viewport" content="width = device-width, initial-scale = 1">
-        
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-        <!-- Optional theme -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        
-        
-        <title>RCAL Collection</title>
-        <link rel="stylesheet" href="stylesheet.css">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <title>Home</title>
     </head>
 <body>
-    <div class = "jumbotron">
-        <h1 id = "header" style="display:inline;">RCAL Collection</h1>
-        <img style="width:15%; display:inline;" src="rollins.png" align="right"> 
-        <h4 id = "subheader">Rollins College Archaeology Lab Collection</h5> 
-    </div>
+    <?php include 'rollins_header.php';?>
     
     <section class="container">
       <div class="left-half">
@@ -36,7 +13,7 @@
             <div class="sidebar-sticky">
                 <ul class = "nav flex-column">
                     <li class = "nav-item active"><a class = "nav-link" href="#">Home</a></li>
-                    <li class = "nav-item"><a class = "nav-link" href="#">Browse</a></li>
+                    <li class = "nav-item"><a class = "nav-link" href="browse.php">Browse</a></li>
                     <li class = "nav-item"><a class = "nav-link" href="#">Search</a></li>
                     <li class = "nav-item"><a class = "nav-link" href="#">Contact</a></li>
                 </ul>
@@ -52,4 +29,5 @@
     </section>
 
 </body>
+<?php include 'footer.php';?>
 </html>
