@@ -12,8 +12,6 @@ if ($conn->connect_error){
     die("Connection failed: " .$conn->connect_error);
 }
 
-echo "Connected successfully!";
-
 // Attempt select query execution
 $sql = "SELECT * FROM Catalog_tbl";
 if($result = $conn->query($sql)){
@@ -43,9 +41,9 @@ if($result = $conn->query($sql)){
                 echo "<td>" . $row['Decoration'] . "</td>";
                 echo "<td>" . $row['Surface_Treatment'] . "</td>";
                 echo "<td>" . $row['Modification'] . "</td>";
-                echo "<td>" . $row['Count'] . "</td>";
-                echo "<td>" . $row['Weight'] . "</td>";
-                echo "<td>" . $row['Culture_Type'] . "</td>";
+                echo "<td>" . $row['Count (n)'] . "</td>";
+                echo "<td>" . $row['Weight (g)'] . "</td>";
+                echo "<td>" . $row['Culture _Type'] . "</td>";
                 echo "<td>" . $row['Notes'] . "</td>";
             echo "</tr>";
         }
