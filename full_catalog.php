@@ -15,7 +15,7 @@ if ($conn->connect_error){
 echo "Connected successfully!";
 
 // Attempt select query execution
-$sql = "SELECT Full_Catalog_Number,Baglog_Number FROM Catalog_tbl";
+$sql = "SELECT * FROM Catalog_tbl";
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){
         echo "<table class=\"table\">";
