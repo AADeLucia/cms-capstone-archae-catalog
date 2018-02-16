@@ -1,0 +1,4 @@
+# Use this file to specify folders and files to not push in repo
+
+# Do not push html-practice
+html-practice/
