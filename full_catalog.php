@@ -2,9 +2,10 @@
 $servername = "localhost";
 $username = "root";
 $password = "compSci";
+$database = "test";
 
 //Create connection
-$conn = new mysqli($servername,$username,$password);
+$conn = new mysqli($servername, $username, $password, $database);
 
 //Check connection
 if ($conn->connect_error){
@@ -35,7 +36,7 @@ if($result = $conn->query($sql)){
         echo "No records matching your query were found.";
     }
 } else{
-    echo "ERROR: Could not able to execute $sql. " . $conn->error;
+    echo "<br />ERROR: Could execute \"$sql\". " . $conn->error;
 }
  
 // Close connection
