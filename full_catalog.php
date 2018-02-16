@@ -15,7 +15,7 @@ echo "Connected successfully!";
 
 // Attempt select query execution
 $sql = "SELECT Full_Catalog_Number,Baglog_Number FROM Catalog_tbl";
-if($result = $mysqli->query($sql)){
+if($result = $conn->query($sql)){
     if($result->num_rows > 0){
         echo "<table>";
             echo "<tr>";
@@ -35,9 +35,9 @@ if($result = $mysqli->query($sql)){
         echo "No records matching your query were found.";
     }
 } else{
-    echo "ERROR: Could not able to execute $sql. " . $mysqli->error;
+    echo "ERROR: Could not able to execute $sql. " . $conn->error;
 }
  
 // Close connection
-$mysqli->close();
+$conn->close();
 ?>
