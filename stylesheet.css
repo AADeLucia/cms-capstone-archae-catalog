@@ -57,6 +57,7 @@ body{
   right: 0px;
   width: 90.5%;
   color: #000;
+  overflow: scroll;
 }
 
 section {
