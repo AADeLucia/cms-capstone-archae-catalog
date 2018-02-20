@@ -16,7 +16,7 @@ if ($conn->connect_error){
 $sql = "SELECT * FROM Catalog_tbl";
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){
-        echo "<table class=\"table\">";
+        echo "<table id = \"catalog_browse\" class=\"table\">";
             echo "<tr>";
                 echo "<th>Catalog Number</th>";
                 echo "<th>Size Fraction</th>";

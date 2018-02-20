@@ -83,3 +83,7 @@ div {
 section.container{
     color:#000;
 }
+
+#catalog_browse{
+    height: 100%;
+}
