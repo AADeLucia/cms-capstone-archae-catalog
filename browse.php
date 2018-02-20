@@ -3,6 +3,8 @@
     <?php include 'head.php';?>
     <head>
         <title>Browse</title>
+        <link rel="stylesheet" href="stylesheet.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     </head>
 <body>
     
