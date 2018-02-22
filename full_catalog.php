@@ -2,7 +2,7 @@
 <html>
     <?php include 'head.php';?>
     <head>
-        <title>Home</title>
+        <title>Full Catalog</title>
     </head>
 <body>
     <?php include 'rollins_header.php';?>
