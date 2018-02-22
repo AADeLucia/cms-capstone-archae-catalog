@@ -14,8 +14,8 @@
                 <div class="sidebar-sticky">
                     <ul class = "nav flex-column">
                         <li class = "nav-item active"><a class = "nav-link" href="#">Home</a></li>
-                        <li class = "nav-item"><a class = "nav-link" href="browse.php">Browse</a></li>
-                        <li class = "nav-item"><a class = "nav-link" href="#">Search</a></li>
+                        <li class = "nav-item"><a class = "nav-link" href="full_catalog.php">Full Catalog</a></li>
+                        <li class = "nav-item"><a class = "nav-link" href="#">Browse</a></li>
                         <li class = "nav-item"><a class = "nav-link" href="#">Contact</a></li>
                     </ul>
                 </div>
