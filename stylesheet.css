@@ -44,6 +44,33 @@ body{
     font-family: 'Open Sans', sans-serif;
 }
 
+.carousel{
+    height:480px;
+    width:100%;
+    background: #ffffff;
+    margin-top: 10px;
+}
+
+
+.carousel-item img{ 
+    width:100%;
+    height: 480px;
+    margin: 0 auto;
+    
+}
+
+.carousel-control , .carousel-control:hover{
+    color:#000;
+    opacity:0;
+}
+
+.carousel-indicators li {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #404040;
+}
+
 
 #body_content {
     height: 100vh;
