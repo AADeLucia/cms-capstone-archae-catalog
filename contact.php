@@ -14,15 +14,14 @@
                 <div class="sidebar-sticky">
                     <ul class = "nav flex-column">
                         <li class = "nav-item active"><a class = "nav-link" href="index.php">Home</a></li>
-                        <li class = "nav-item"><a class = "nav-link" href="#">Full Catalog</a></li>
+                        <li class = "nav-item"><a class = "nav-link" href="full_catalog.php">Full Catalog</a></li>
                         <li class = "nav-item"><a class = "nav-link" href="browse.php">Browse</a></li>
-                        <li class = "nav-item"><a class = "nav-link" href="contact.php">Contact</a></li>
+                        <li class = "nav-item"><a class = "nav-link" href="#">Contact</a></li>
                     </ul>
                 </div>
             </nav>
           </div>
           <div class="col" id="content_section">
-            <?php include 'full_catalog_database.php';?>  
           </div>
         </div>
     </div>

@@ -36,13 +36,20 @@ body{
     padding: 0;
     margin: 0 auto;
     text-align: center;
+    min-width: 150px;
 }
 .nav-link{
     color: white;
+    min-width: 150px;
+}
+
+ul.nav.flex-column{
+    min-width: 150px;
 }
 .sidebar-sticky{
     height: 100%;
     font-family: 'Open Sans', sans-serif;
+    min-width: 150px;
 }
 
 .carousel{
@@ -80,6 +87,7 @@ body{
 #sidebar_section {
   background: #1b2e84;
   height: 100vh;
+  min-width: 150px;
 }
 #content_section {
   background: #fff;
