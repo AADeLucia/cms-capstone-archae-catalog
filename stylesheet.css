@@ -79,6 +79,9 @@ ul.nav.flex-column{
     background-color: #404040;
 }
 
+#card-block{
+    position:bottom;
+}
 
 #body_content {
     height: 100vh;
