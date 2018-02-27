@@ -16,7 +16,7 @@
                         <li class = "nav-item active"><a class = "nav-link" href="index.php">Home</a></li>
                         <li class = "nav-item"><a class = "nav-link" href="#">Full Catalog</a></li>
                         <li class = "nav-item"><a class = "nav-link" href="browse.php">Browse</a></li>
-                        <li class = "nav-item"><a class = "nav-link" href="contact.php">Contact</a></li>
+                        <li class = "nav-item"><a class = "nav-link" href="contact_form.php">Contact</a></li>
                     </ul>
                 </div>
             </nav>
