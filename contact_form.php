@@ -22,7 +22,7 @@
             </nav>
           </div>
           <div class="col" id="content_section">
-            <form name="contactform" method="post" action="send_form_email.php">
+            <form name="contact_form" method="post" action="send_form_email.php">
             <table width="450px">
             <tr>
              <td valign="top">
