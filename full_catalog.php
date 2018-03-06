@@ -21,42 +21,52 @@
                 </div>
             </nav>
           </div>
-          <div class="col" id="content_section">
-            <div class="card-group">
-                <div class="card">
-                <img class="card-img-top" src="..." onerror="this.src='no_image.png';"/>
-                <div class="card-block">
-                  <h4 class="card-title">None</h4>
-                  <p class="card-text">Material Type: None</p>
-                  <p class="card-text">Surface Treatment: None</p>
-                  <p class="card-text">Decoration: None</p>
-                  <p class="card-text">Catalog Number: None</p>  
-                </div>
-              <div class="card">
-                <img class="card-img-top" src="dagger.jpg" onerror="this.src='no_image.png';"/>
-                <div class="card-block">
-                  <h4 class="card-title">Mayan Dagger</h4>
-                  <p class="card-text">Material Type: Pure evil</p>
-                  <p class="card-text">Surface Treatment: Hellfire</p>
-                  <p class="card-text">Decoration: None</p>
-                  <p class="card-text">Catalog Number: 8OR452.60.1</p>
-                </div>
-              </div>
-              <div class="card">
-                <img class="card-img-top" src="ark.jpeg" onerror="this.src='no_image.png';"/>
-                <div class="card-block">
-                  <h4 class="card-title">Ark of the Covenant</h4>
-                  <p class="card-text">Material Type: Heavenly Gold</p>
-                  <p class="card-text">Surface Treatment: Lightning</p>
-                  <p class="card-text">Decoration: Angels 'n shit</p>
-                  <p class="card-text">Catalog Number: 8OR452.60.1</p>
-                </div>
-              </div>
-              </div>
-            </div>
+    <?php include 'full_catalog_database.php';?>
+    <!--<div class="col" id="content_section">
+      <div class="card-group">
+        <div class="card mb-3">
+          <img class="img-responsive" id="artifact_thumbnail" src="dagger.jpg" onerror="this.src='no_image.png';"/>
+          <div class="card-block">
+            <h4 class="card-header">Mayan Dagger</h4>
           </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Material Type: Pure Evil</li>
+              <li class="list-group-item">Surface Treatment: Hellfire</li>
+              <li class="list-group-item">Decoration: None</li>
+              <li class="list-group-item">Catalog Number: 8OR552.60.1</li>
+            </ul>
         </div>
-    </div>
+        
+          <div class="card mb-3">
+            <img class="img-responsive" id="artifact_thumbnail" src="ark.jpeg" onerror="this.src='no_image.png';"/>
+            <div class="card-block">
+              <h4 class="card-header">Ark of the Covenant</h4>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Material Type: Solid Gold</li>
+              <li class="list-group-item">Surface Treatment: Lightning</li>
+              <li class="list-group-item">Decoration: Angels 'n shit</li>
+              <li class="list-group-item">Catalog Number: 8OR452.60.1</li>
+            </ul>
+          </div>
+              
+          <div class="card mb-3">
+            <img class="card-img-top" id="artifact_thumbnail" src="..." onerror="this.src='no_image.png';"/>
+              <div class="card-block">
+                <h4 class="card-header">Null</h4>
+              </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Material Type: None</li>
+              <li class="list-group-item">Surface Treatment: None</li>
+              <li class="list-group-item">Decoration: None</li>
+              <li class="list-group-item">Catalog Number: None</li>
+            </ul>
+          </div>
+      </div>
+    </div> -->
+  </div>
+</div>
+</div>
 
 </body>
 <?php include 'footer.php';?>
