@@ -17,7 +17,7 @@ $sql = "SELECT * FROM Catalog_tbl";
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){
         while($row = $result->fetch_array()){
-            echo "<div class=\"card\">";
+            echo "<div class=\"card w-100\">";
             echo "<ul class=\"list-group list-group-flush\">";
               echo "<li class=\"list-group-item\">Material Type: " . $row['Material_Type'] . "</li>";
               echo "<li class=\"list-group-item\">Surface Treatment: " . $row['Surface_Treatment'] . "</li>";
@@ -33,6 +33,7 @@ if($result = $conn->query($sql)){
               echo "<li class=\"list-group-item\">Notes: " . $row['Notes'] . "</li>";
             echo "</ul>";
             echo "</div>";
+            echo "<br />";
         }
         // Free result set
         $result->free();
@@ -42,7 +43,7 @@ if($result = $conn->query($sql)){
 } else{
     echo "<br />ERROR: Could execute \"$sql\". " . $conn->error;
 }
- 
+
 // Close connection
 $conn->close();
 ?>
