@@ -1,13 +1,10 @@
 <?php
+include "remote_db_access.php";
 
-// Configuration for database connection
-//include 'remote_db_access.php'; // use for local dev environment
-include 'local_db_access.php'; // use on server
-
-// Create connection
+//Create connection
 $conn = new mysqli($servername, $username, $password, $database);
 
-// Check connection
+//Check connection
 if ($conn->connect_error){
     die("Connection failed: " .$conn->connect_error);
 }
