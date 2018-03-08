@@ -1,8 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "compSci";
-$database = "test";
+include "remote_db_access.php";
 
 //Create connection
 $conn = new mysqli($servername, $username, $password, $database);
