@@ -1,6 +1,8 @@
 <head>
     <meta charset="UTF-8">
-
+    
+    <link rel="shortcut icon" href="favicon.ico" />
+    
     <!-- If IE use the latest rendering engine -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
