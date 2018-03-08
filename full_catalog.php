@@ -6,7 +6,7 @@
     </head>
 <body>
     <?php include 'rollins_header.php';?>
-    
+
     <div id="body_content" class="container-fluid">
         <div class="row">
           <div class="col-2" id="sidebar_section">
@@ -21,11 +21,12 @@
                 </div>
             </nav>
           </div>
-          <div class="col" id="content_section">
-            <?php include 'full_catalog_database.php';?>  
-          </div>
-        </div>
-    </div>
+
+    <div class="col" id="content_section">
+      <?php include 'full_catalog_database.php';?>
+  </div>
+</div>
+</div>
 
 </body>
 <?php include 'footer.php';?>

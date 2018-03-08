@@ -16,38 +16,38 @@ if ($conn->connect_error){
 $sql = "SELECT * FROM Catalog_tbl";
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){
-        echo "<table id = \"catalog_browse\" class=\"table\">";
-            echo "<tr>";
-                echo "<th>Catalog Number</th>";
-                echo "<th>Size Fraction</th>";
-                echo "<th>Material</th>";
-                echo "<th>Material Type</th>";
-                echo "<th>Form</th>";
-                echo "<th>Decoration</th>";
-                echo "<th>Surface Treatment</th>";
-                echo "<th>Modification</th>";
-                echo "<th>Count</th>";
-                echo "<th>Weight</th>";
-                echo "<th>Culture Type</th>";
-                echo "<th>Notes</th>";
-            echo "</tr>";
         while($row = $result->fetch_array()){
-            echo "<tr>";
-                echo "<td>" . $row['Full_Catalog_Number'] . "</td>";
-                echo "<td>" . $row['Size_Fraction'] . "</td>";
-                echo "<td>" . $row['Material'] . "</td>";
-                echo "<td>" . $row['Material_Type'] . "</td>";
-                echo "<td>" . $row['Form'] . "</td>";
-                echo "<td>" . $row['Decoration'] . "</td>";
-                echo "<td>" . $row['Surface_Treatment'] . "</td>";
-                echo "<td>" . $row['Modification'] . "</td>";
-                echo "<td>" . $row['Count (n)'] . "</td>";
-                echo "<td>" . $row['Weight (g)'] . "</td>";
-                echo "<td>" . $row['Culture _Type'] . "</td>";
-                echo "<td>" . $row['Notes'] . "</td>";
-            echo "</tr>";
+            echo "<div class=\"card w-100\">";
+            echo "<div class=\"container\">";
+            echo "<div class=\"row align-items-center\">";
+            echo "<div class=\"col\">";
+              echo "<img class=\"catalog_thumbnail\" src=\"rollins_crest.png\">";
+            echo "</div>";
+            echo "<div class=\"col\">";
+              echo "<ul class=\"list-group list-group-flush\">";
+                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Catalog Number</span>: " . $row['Full_Catalog_Number'] . "</li>";
+                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Material Type</span>: " . $row['Material_Type'] . "</li>";
+                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Surface Treatment</span>: " . $row['Surface_Treatment'] . "</li>";
+                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Decoration</span>: " . $row['Decoration'] .  "</li>";
+                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Size Fraction</span>: " . $row['Size_Fraction'] . "</li>";
+                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Material</span>: " . $row['Material'] . "</li>";
+              echo "</ul>";
+            echo "</div>";
+            echo "<div class=\"col\">";
+              echo "<ul class=\"list-group list-group-flush\">";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Form</span>: " . $row['Form'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Modification</span>: " . $row['Modification'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Count</span>: " . $row['Count (n)'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Weight</span>: " . $row['Weight (g)'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Culture Type</span>: " . $row['Culture_Type'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Notes</span>: " . $row['Notes'] . "</li>";
+              echo "</ul>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
+            echo "</div>";
+            echo "<br />";
         }
-        echo "</table>";
         // Free result set
         $result->free();
     } else{
@@ -56,7 +56,7 @@ if($result = $conn->query($sql)){
 } else{
     echo "<br />ERROR: Could execute \"$sql\". " . $conn->error;
 }
- 
+
 // Close connection
 $conn->close();
 ?>
