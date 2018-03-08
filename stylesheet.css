@@ -108,3 +108,9 @@ ul.nav.flex-column{
 #catalog_browse{
     height: 100%;
 }
+
+#artifact_thumbnail{
+    height: 250px;
+    width: 100%;
+    overflow: hidden;
+}
