@@ -110,7 +110,12 @@ ul.nav.flex-column{
 }
 .catalog_thumbnail {
   width: 100%;
+  max-width: 200px;
+
 }
 .catalog_field {
   text-decoration: underline;
+}
+#catalog_picture {
+  align-self: center;
 }
