@@ -119,3 +119,8 @@ ul.nav.flex-column{
 #catalog_picture {
   text-align: center;
 }
+
+/*** Forms ***/
+div.form-group.col {
+  text-align: center;
+}
