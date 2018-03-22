@@ -1,5 +1,5 @@
 <?php
-include "local_db_access.php";
+include "remote_db_access.php";
 
 //Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -9,8 +9,21 @@ if ($conn->connect_error){
     die("Connection failed: " .$conn->connect_error);
 }
 
+$limit = $_GET['limit'];
+$curr_page = $_GET['page'];
+//$sql1 = "SELECT count(1) FROM Catalog_tbl "
+
+$total = 130;
+
+$links = 2;
+
+include "pagination_links.php";
+
+$sql = "SELECT * FROM Catalog_tbl LIMIT" . " " . $row_start . ", " . $limit;
+
+
 // Attempt select query execution
-$sql = "SELECT * FROM Catalog_tbl";
+
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){
         while($row = $result->fetch_array()){
@@ -18,7 +31,7 @@ if($result = $conn->query($sql)){
             echo "<div class=\"container\">";
             echo "<div class=\"row align-items-center\">";
             echo "<div id =\"catalog_picture\" class=\"col\">";
-              echo "<img class=\"catalog_thumbnail\" src=\"rollins_crest.png\">";
+            echo "<img class=\"catalog_thumbnail\" src=\"rollins_crest.png\">";
             echo "</div>";
             echo "<div class=\"col\">";
               echo "<ul class=\"list-group list-group-flush\">";
