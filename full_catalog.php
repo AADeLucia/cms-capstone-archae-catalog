@@ -9,8 +9,8 @@
 
     <div id="body_content" class="container-fluid">
         <div class="row">
-          <div class="col-2" id="sidebar_section">
-            <nav class = "d-none d-md-block sidebar">
+          <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1" id="sidebar_section">
+            <nav class = "sidebar">
                 <div class="sidebar-sticky">
                     <ul class = "nav flex-column">
                         <li class = "nav-item active"><a class = "nav-link" href="index.php">Home</a></li>
@@ -22,7 +22,7 @@
             </nav>
           </div>
 
-    <div class="col" id="content_section">
+    <div class="col-lg-10 col-md-11 col-sm-11 col-xs-11" id="content_section">
       <?php include 'full_catalog_database.php';?>
   </div>
 </div>

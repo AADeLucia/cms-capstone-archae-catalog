@@ -6,11 +6,11 @@
     </head>
 <body>
     <?php include 'rollins_header.php';?>
-    
+
    <div id="body_content" class="container-fluid">
      <div class="row">
-        <div class="col-2" id="sidebar_section">
-          <nav class = "d-none d-md-block sidebar">
+        <div class="col-lg-2 col-md-1 col-sm-12 col-xs-12" id="sidebar_section">
+          <nav class = "sidebar">
               <div class="sidebar-sticky">
                   <ul class = "nav flex-column">
                       <li class = "nav-item active"><a class = "nav-link" href="#">Home</a></li>
@@ -21,7 +21,7 @@
               </div>
           </nav>
         </div>
-        <div class="col" id="content_section">
+        <div class="col-lg-10 col-md-11 d-none d-md-block" id="content_section">
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
             <!-- Indicators -->
@@ -30,7 +30,7 @@
               <li data-target="#myCarousel" data-slide-to="1"></li>
               <li data-target="#myCarousel" data-slide-to="2"></li>
             </ul>
-          
+
             <!-- The slideshow -->
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -43,7 +43,7 @@
                 <img src="Indy3.jpg" alt="Indy3">
               </div>
             </div>
-          
+
             <!-- Left and right controls -->
             <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
               <span class="carousel-control-prev-icon"></span>
@@ -51,7 +51,7 @@
             <a class="carousel-control-next" href="#myCarousel" data-slide="next">
               <span class="carousel-control-next-icon"></span>
             </a>
-            
+
           </div>
         </div>
       </div>
