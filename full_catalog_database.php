@@ -11,18 +11,18 @@ if ($conn->connect_error){
 
 $limit = $_GET['limit'];
 $curr_page = $_GET['page'];
-//$sql1 = "SELECT count(1) FROM Catalog_tbl "
-
+// $sql1 = "SELECT * FROM Catalog_tbl "
+// $result1 = $conn->query($sql1);
 $total = 130;
+
 
 $links = 2;
 
 include "pagination_links.php";
 
-$sql = "SELECT * FROM Catalog_tbl LIMIT" . " " . $row_start . ", " . $limit;
-
-
 // Attempt select query execution
+
+$sql = "SELECT * FROM Catalog_tbl LIMIT" . " " . $row_start . ", " . $limit;
 
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){

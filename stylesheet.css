@@ -131,8 +131,8 @@ ul.nav.flex-column{
     text-decoration: none;
 }
 
-.pagination a.active {
-    background-color: #4CAF50;
+.pagination li.active {
+    background-color: #ddd;
     color: white;
 }
 
