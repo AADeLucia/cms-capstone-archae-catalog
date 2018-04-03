@@ -23,72 +23,68 @@
           </div>
           <div class="col" id="content_section">
 
-            <!-- Query form -->
-            <form class="form-inline">
+            <!-- Search by Catalog Number -->
+            <form class="form-inline" method="post" action="">
               <div class="form-group mb-2">
                 Catalog Number:
               </div>
               <div class="form-group mx-sm-3 mb-2">
-                <input type="text" class="form-control" id="catalog_number">
+                <input type="text" class="form-control" name="catalog_number">
               </div>
-                <button type="submit" class="btn btn-primary">Search</button>
+                <button type="submit" name="search_submit" class="btn btn-primary">Search</button>
             </form>
             <hr />
-            Define your search:
-            <form>
+
+            <!-- Browse -->
+            Define your search: (Hold CTRL on Windows or CMD on Mac to select more than one)
+            <form method="post" action="">
               <div class="row align-items-center">
                 <div class="form-group col">
                   <label for="material">Material</label>
-                  <select id="material" class="form-control">
-                    <option selected>All</option>
-                    <option>Pottery</option>
-                    <option>Charcoal</option>
+                  <select multiple name="materials[]" class="form-control">
+                    <option selected>---All---</option>
+                    <?php $table="materials"; $column="material_name"; include "fill_select_option.php"; ?>
                   </select>
                 </div>
                 <div class="form-group col">
-                  <label for="material_type">Material Type</label>
-                  <select id="material_type" class="form-control">
-                    <option selected>All</option>
-                    <option>Bone Tempered</option>
-                    <option>Wood</option>
+                  <label for="material_types[]">Material Type</label>
+                  <select multiple name="material_type" class="form-control">
+                    <option selected>---All---</option>
+                    <?php $table="material_types"; $column="type_name"; include "fill_select_option.php"; ?>
                   </select>
                 </div>
                 <div class="form-group col">
                   <label for="form">Form</label>
-                  <select id="form" class="form-control">
-                    <option selected>All</option>
-                    <option>Hammer</option>
-                    <option>Nail</option>
+                  <select multiple name="forms[]" class="form-control">
+                    <option selected>---All---</option>
+                    <?php $table="forms"; $column="form_name"; include "fill_select_option.php"; ?>
                   </select>
                 </div>
                 <div class="form-group col">
                   <label for="surface_treatment">Surface Treatment</label>
-                  <select id="surface_treatment" class="form-control">
-                    <option selected>All</option>
-                    <option>Stamped</option>
-                    <option>Plain</option>
+                  <select multiple name="surface_treatments[]" class="form-control">
+                    <option selected>---All---</option>
+                    <?php $table="surface_treatments"; $column="treatment_name"; include "fill_select_option.php"; ?>
                   </select>
                 </div>
                 <div class="form-group col">
                   <label for="decoration">Decoration</label>
-                  <select id="decoration" class="form-control">
-                    <option selected>All</option>
-                    <option>Painted Zoned</option>
-                    <option>Brushed</option>
+                  <select multiple name="decorations[]" class="form-control">
+                    <option selected>---All---</option>
+                    <?php $table="decorations"; $column="decoration_name"; include "fill_select_option.php"; ?>
                   </select>
                 </div>
                 <div class="form-group col">
                   <label for="modification">Modification</label>
-                  <select id="modification" class="form-control">
-                    <option selected>All</option>
-                    <option>Soot</option>
-                    <option>Residue</option>
+                  <select multiple name="modifications[]" class="form-control">
+                    <option selected>---All---</option>
+                    <?php $table="modifications"; $column="modification_name"; include "fill_select_option.php"; ?>
                   </select>
                 </div>
               </div>
               <div class="row align-items-center">
                 <div class="col">
-                  <button type="submit" class="btn btn-primary">Search</button>
+                  <button type="submit" name="browse_submit" class="btn btn-primary">Search</button>
                 </div>
               </div>
             </form>
@@ -96,9 +92,14 @@
             <hr />
             <br />
 
-
             <!-- Show results -->
-            <?php include 'browse_database.php';?>
+            <?php
+              // if(isset($_POST["browse_submit"])){
+              //   include 'get_catalog_item_by_id.php';
+              // }
+              if(isset($_POST["browse_submit"])){
+                include 'browse_database.php';
+              }?>
 
           </div>
         </div>
