@@ -6,7 +6,7 @@
                 <h6 id = "subheader">Rollins College Archaeology Lab Collection</h5>
             </div>
             <div class="col-lg-2 col-md-3 d-none d-md-block">
-                <img id="rollins_logo" src="rollins.png">
+                <img id="rollins_logo" src="media/rollins.png">
             </div>
         </div>
     </div>
