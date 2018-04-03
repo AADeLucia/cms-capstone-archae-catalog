@@ -34,13 +34,13 @@
             <!-- The slideshow -->
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="Indy.jpeg" alt="Indy">
+                <img src="media/Indy.jpeg" alt="Indy">
               </div>
               <div class="carousel-item">
-                <img src="Indy2.jpg" alt="Indy2">
+                <img src="media/Indy2.jpg" alt="Indy2">
               </div>
               <div class="carousel-item">
-                <img src="Indy3.jpg" alt="Indy3">
+                <img src="media/Indy3.jpg" alt="Indy3">
               </div>
             </div>
 
