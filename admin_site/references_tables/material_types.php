@@ -9,19 +9,21 @@ if ($conn->connect_error){
 }
 
 //Attempt to select query execution
-$sql = "SELECT * FROM materials";
+$sql = "SELECT * FROM material_types";
 if ($result = $conn->query($sql)){
   if($result->num_rows > 0){
     echo "<table id = \"catalog_browse\" class=\"table\">";
         echo "<tr>";
-            echo "<th><u>Material Name</th>";
+            echo "<th><u>Material Type</th>";
+            echo "<th><u>Associated Material</th>";
             echo "<th><u>Description</th>";
         echo "</tr>";
 
     while($row = $result->fetch_array()){
 
         echo "<tr>";
-            echo "<td>" . $row['material_name'] . "</td>";
+            echo "<td>" . $row['type_name'] . "</td>";
+            echo "<td>" . $row['associated_material'] . "</td>";
             echo "<td>" . $row['description'] . "</td>";
         echo "</tr>";
     }

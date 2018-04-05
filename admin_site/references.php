@@ -27,6 +27,8 @@
             <!-- Place references information here -->
             <h3> Materials</h3>
             <?php include "references_tables/materials.php";?>
+            <h3> Material Types</h3>
+            <?php include "references_tables/material_types.php";?>
           </div>
         </div>
     </div>
