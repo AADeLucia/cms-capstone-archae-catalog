@@ -57,10 +57,6 @@ if($result = $conn->query($sql)){
 } else{
     echo "<br />ERROR: Could execute \"$sql\". " . $conn->error;
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> d76d848a9812c85d64420b49df83bc2887453a7d
 // Close connection
 $conn->close();
 ?>

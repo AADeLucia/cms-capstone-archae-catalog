@@ -60,11 +60,11 @@ ul.nav.flex-column{
 }
 
 
-.carousel-item img{ 
+.carousel-item img{
     width:100%;
     height: 480px;
     margin: 0 auto;
-    
+
 }
 
 .carousel-control , .carousel-control:hover{
@@ -108,9 +108,17 @@ ul.nav.flex-column{
 #catalog_browse{
     height: 100%;
 }
+<<<<<<< HEAD
 
 #artifact_thumbnail{
     height: 250px;
     width: 100%;
     overflow: hidden;
+=======
+.catalog_thumbnail {
+  width: 100%;
+}
+.catalog_field {
+  text-decoration: underline;
+>>>>>>> d76d848a9812c85d64420b49df83bc2887453a7d
 }
