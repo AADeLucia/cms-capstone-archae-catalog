@@ -94,10 +94,11 @@
 
             <!-- Show results -->
             <?php
-              // if(isset($_POST["browse_submit"])){
-              //   include 'get_catalog_item_by_id.php';
-              // }
-              if(isset($_POST["browse_submit"])){
+              if(isset($_POST["search_submit"])){
+                $catalog_number = $_POST["catalog_number"];
+                include 'get_catalog_item_by_id.php';
+              }
+              else if(isset($_POST["browse_submit"])){
                 include 'browse_database.php';
               }?>
 

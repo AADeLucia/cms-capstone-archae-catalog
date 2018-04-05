@@ -10,14 +10,12 @@ if ($conn->connect_error){
     die("Connection failed: " .$conn->connect_error);
 }
 
-// Prepare and bind statement
-$stmt = $conn->prepare("SELECT * FROM Catalog_tbl WHERE Catalog_Number=?");
-$stmt->bind_param("s", $catalog_number);
-
-$catalog_number = %_POST['catalog_number'];
+// Prepare
+$sql = "SELECT * FROM catalog WHERE full_catalog_number=". "\"". $catalog_number ."\"";
+echo $sql;
 
 // Attempt statement execution
-if($result = $stmt->execute()){
+if($result = $conn->query($sql)){
 echo nl2br("\n" . "Returned " . $result->num_rows . " rows");
     if($result->num_rows > 0){
         while($row = $result->fetch_array()){
@@ -29,20 +27,20 @@ echo nl2br("\n" . "Returned " . $result->num_rows . " rows");
             echo "</div>";
             echo "<div class=\"col\">";
               echo "<ul class=\"list-group list-group-flush\">";
-                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Catalog Number</span>: " . $row['Full_Catalog_Number'] . "</li>";
-                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Material</span>: " . $row['Material'] . "</li>";
-                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Material Type</span>: " . $row['Material_Type'] . "</li>";
-                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Form</span>: " . $row['Form'] . "</li>";
-                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Decoration</span>: " . $row['Decoration'] .  "</li>";
+                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Catalog Number</span>: " . $row['full_catalog_number'] . "</li>";
+                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Material</span>: " . $row['material'] . "</li>";
+                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Material Type</span>: " . $row['material_type'] . "</li>";
+                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Form</span>: " . $row['ofrm'] . "</li>";
+                echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Decoration</span>: " . $row['decoration'] .  "</li>";
                 echo "</ul>";
             echo "</div>";
             echo "<div class=\"col\">";
               echo "<ul class=\"list-group list-group-flush\">";
-              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Surface Treatment</span>: " . $row['Surface_Treatment'] . "</li>";
-              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Modification</span>: " . $row['Modification'] . "</li>";
-              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Count</span>: " . $row['Count (n)'] . "</li>";
-              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Weight</span>: " . $row['Weight (g)'] . "</li>";
-              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Culture Type</span>: " . $row['Culture_Type'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Surface Treatment</span>: " . $row['surface_treatment'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Modification</span>: " . $row['modification'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Count</span>: " . $row['count_(n)'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Weight</span>: " . $row['weight_(g)'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Culture Type</span>: " . $row['culture_type'] . "</li>";
               echo "</ul>";
             echo "</div>";
             echo "</div>";
@@ -52,7 +50,6 @@ echo nl2br("\n" . "Returned " . $result->num_rows . " rows");
         }
         // Free result set
         $result->free();
-        $stmt->close();
     } else{
         echo "\nNo records matching your query were found.";
     }
