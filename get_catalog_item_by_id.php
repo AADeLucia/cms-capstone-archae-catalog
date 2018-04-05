@@ -11,48 +11,13 @@ if ($conn->connect_error){
 }
 
 // Prepare and bind statement
-//$stmt = $conn->prepare("SELECT * FROM Catalog_tbl WHERE Material LIKE ? and Material_Type LIKE ? and Form LIKE ? and Surface_Treatment LIKE ? and Decoration LIKE ? and Modification LIKE ?");
-//$stmt->bind_param("ssssss", $material, $material_type, $form, $surface_treatment, $decoration, $modification);
+$stmt = $conn->prepare("SELECT * FROM Catalog_tbl WHERE Catalog_Number=?");
+$stmt->bind_param("s", $catalog_number);
 
-// Set values
-// Use SQL wildcard (%) to replace "All" option
-if($_POST['material']=="All"){
-  $material = "\"%\" or Material is null";
-} else {
-  $material = "\"" . $_POST['material'] . "\"";
-}
-if($_POST['material_type']=="All"){
-  $material_type = "\"%\" or Material_Type is null";
-} else {
-  $material_type = "\"" . $_POST['material_type'] . "\"";
-}
-if($_POST['form']=="All"){
-  $form = "\"%\" or Form is null";
-} else {
-  $form = "\"" . $_POST['form'] . "\"";
-}
-if($_POST['surface_treatment']=="All"){
-  $surface_treatment = "\"%\" or Surface_Treatment is null";
-} else {
-  $surface_treatment = "\"" . $_POST['surface_treatment'] . "\"";
-}
-if($_POST['decoration']=="All"){
-  $decoration = "\"%\" or Decoration is null";
-} else {
-  $decoration = "\"" . $_POST['decoration'] . "\"";
-}
-if($_POST['modification']=="All"){
-  $modification = "\"%\" or Modification is null";
-} else {
-  $modification = "\"" . $_POST['modification'] . "\"";
-}
-//echo $material, $material_type, $form, $surface_treatment, $decoration, $modification;
+$catalog_number = %_POST['catalog_number'];
 
 // Attempt statement execution
-$sql = "SELECT * FROM Catalog_tbl WHERE Material LIKE " . $material . " and Material_Type LIKE " . $material_type . " and Form LIKE " .$form." and Surface_Treatment LIKE ".$surface_treatment." and Decoration LIKE ".$decoration." and Modification LIKE ".$modification;
-echo nl2br("\n" . $sql);
-if($result = $conn->query($sql)){
-//if($result = $stmt->execute()){
+if($result = $stmt->execute()){
 echo nl2br("\n" . "Returned " . $result->num_rows . " rows");
     if($result->num_rows > 0){
         while($row = $result->fetch_array()){

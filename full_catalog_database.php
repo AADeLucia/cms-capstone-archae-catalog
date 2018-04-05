@@ -1,5 +1,6 @@
 <?php
-include "local_db_access.php";
+//include "local_db_access.php";
+include "remote_db_access.php";
 
 //Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -18,7 +19,7 @@ if($result = $conn->query($sql)){
             echo "<div class=\"container\">";
             echo "<div class=\"row align-items-center\">";
             echo "<div id =\"catalog_picture\" class=\"col\">";
-              echo "<img class=\"catalog_thumbnail\" src=\"rollins_crest.png\">";
+              echo "<img class=\"catalog_thumbnail\" src=\"media/rollins_crest.png\">";
             echo "</div>";
             echo "<div class=\"col\">";
               echo "<ul class=\"list-group list-group-flush\">";
