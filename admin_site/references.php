@@ -33,6 +33,10 @@
             <?php include "references_tables/form_table.php";?>
             <h3>Surface Treatments</h3>
             <?php include "references_tables/surface_treatment.php";?>
+            <h3>Decorations</h3>
+            <?php include "references_tables/decoration.php";?>
+            <h3>Modifications</h3>
+            <?php include "references_tables/modification.php";?>
           </div>
         </div>
     </div>
