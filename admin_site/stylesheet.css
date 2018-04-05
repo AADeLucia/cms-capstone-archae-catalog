@@ -1,0 +1,121 @@
+body{
+    background-color:#f6ac24;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+}
+
+/*** Rollins Header ***/
+#head_container {
+    padding: 0;
+    margin: 0;
+}
+#header{
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    display: inline;
+    padding-left:5px;
+}
+#rollins_logo {
+    width: 100%;
+    display: inline;
+}
+.jumbotron{
+    background-color:#1b2e84;
+    padding: 20px;
+}
+#subheader{
+    color:#fff;
+    font-family: 'Open Sans', sans-serif;
+    padding-left: 8px;
+}
+
+
+/*** Body Content ***/
+.nav{
+    width:100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    min-width: 150px;
+}
+.nav-link{
+    color: white;
+    min-width: 150px;
+}
+
+ul.nav.flex-column{
+    min-width: 150px;
+}
+.sidebar-sticky{
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    min-width: 150px;
+}
+
+.carousel{
+    height:480px;
+    width:100%;
+    background: #ffffff;
+    margin-top: 10px;
+}
+
+
+.carousel-item img{
+    width:100%;
+    height: 480px;
+    margin: 0 auto;
+
+}
+
+.carousel-control , .carousel-control:hover{
+    color:#000;
+    opacity:0;
+}
+
+.carousel-indicators li {
+    border-radius: 12px;
+    width: 12px;
+    height: 12px;
+    background-color: #404040;
+}
+
+#card-block{
+    position:bottom;
+}
+
+#body_content {
+    height: 100vh;
+    padding-top: 0;
+}
+#sidebar_section {
+  background: #1b2e84;
+  height: 100vh;
+  min-width: 150px;
+}
+#content_section {
+  background: #fff;
+  color: #000;
+  overflow: scroll;
+  height: 100vh;
+}
+
+/*** Footer ***/
+#footer_container {
+    padding: 15px;
+}
+
+/*** Catalog Table **/
+#catalog_browse{
+    height: 100%;
+}
+.catalog_thumbnail {
+  width: 100%;
+  max-width: 200px;
+
+}
+.catalog_field {
+  text-decoration: underline;
+}
+#catalog_picture {
+  align-self: center;
+}
