@@ -25,10 +25,14 @@
           </div>
           <div class="col" id="content_section">
             <!-- Place references information here -->
-            <h3> Materials</h3>
+            <h3>Materials</h3>
             <?php include "references_tables/materials.php";?>
-            <h3> Material Types</h3>
+            <h3>Material Types</h3>
             <?php include "references_tables/material_types.php";?>
+            <h3>Forms</h3>
+            <?php include "references_tables/form_table.php";?>
+            <h3>Surface Treatments</h3>
+            <?php include "references_tables/surface_treatment.php";?>
           </div>
         </div>
     </div>
