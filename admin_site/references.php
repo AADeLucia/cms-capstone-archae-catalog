@@ -25,6 +25,8 @@
           </div>
           <div class="col" id="content_section">
             <!-- Place references information here -->
+            <h3> Materials</h3>
+            <?php include "references_tables/materials.php";?>
           </div>
         </div>
     </div>
