@@ -25,8 +25,6 @@
           </div>
           <div class="col" id="content_section">
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-            <!-- Place references information here -->
-            <div class="panel-group" id="accordion">
               <div class="panel panel-default">
                 <div class="panel-heading active" role="tab" id="headingOne">
                   <h4 class ="panel-title">
