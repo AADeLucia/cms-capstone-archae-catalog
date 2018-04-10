@@ -3,6 +3,14 @@
     <?php include 'head.php';?>
     <head>
         <title>Browse</title>
+        <!--
+        <script>
+        $(document).ready(function(){
+          $("search_submit").click(function(){
+            $("#browse_results").text("This works!");
+          });
+        });
+      </script-->
     </head>
 <body>
     <?php include 'rollins_header.php';?>
@@ -92,30 +100,32 @@
             <hr />
 
             <!-- Show results -->
-            <?php
-            // Show catalog item search results
-              if(isset($_POST["search_submit"])){
-                $catalog_number = $_POST["catalog_number"];
-                include 'get_catalog_item_by_id.php';
-              }
-            // Show browse results
-              else if(isset($_POST["browse_submit"])){
-                // Save select form values into array
-                $default_select = "---All---";
-                $selections = array("material"=>$_POST["materials"],
-                "material_type"=>$_POST["material_types"], "form"=>$_POST["forms"],
-              "surface_treatment"=>$_POST["surface_treatments"], "modification"=>$_POST["modifications"],
-            "decoration"=>$_POST["decorations"]);
-
-              // Check if selections were made in all forms
-              foreach ($selections as $key => $val){
-                if ($val[0] == $default_select){
-                  $selections[$key] = NULL;
+            <div id="browse_results">
+              <?php
+              // Show catalog item search results
+                if(isset($_POST["search_submit"])){
+                  $catalog_number = $_POST["catalog_number"];
+                  include 'get_catalog_item_by_id.php';
                 }
-              }
-              // Display results
-                include 'browse_database.php';
-              }?>
+              // Show browse results
+                else if(isset($_POST["browse_submit"])){
+                  // Save select form values into array
+                  $default_select = "---All---";
+                  $selections = array("material"=>$_POST["materials"],
+                  "material_type"=>$_POST["material_types"], "form"=>$_POST["forms"],
+                "surface_treatment"=>$_POST["surface_treatments"], "modification"=>$_POST["modifications"],
+              "decoration"=>$_POST["decorations"]);
+
+                // Check if selections were made in all forms
+                foreach ($selections as $key => $val){
+                  if ($val[0] == $default_select){
+                    $selections[$key] = NULL;
+                  }
+                }
+                // Display results
+                  include 'browse_database.php';
+                }?>
+            </div>
 
           </div>
         </div>
