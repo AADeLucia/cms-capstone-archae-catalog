@@ -24,7 +24,32 @@
             </nav>
           </div>
           <div class="col" id="content_section">
+            <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class ="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Materials</a>
+                  </h4>
+                </div>
+              <div id="collapse1" class="panel-collapse collapse in">
+                <div class= "panel-body">
+                  <?php include "references_tables/materials.php";?>
+                </div>
+              </div>
+            </div>
+          </div>
+
             <!-- Place references information here -->
+            <h3>Material Types</h3>
+            <?php include "references_tables/material_types.php";?>
+            <h3>Forms</h3>
+            <?php include "references_tables/form_table.php";?>
+            <h3>Surface Treatments</h3>
+            <?php include "references_tables/surface_treatment.php";?>
+            <h3>Decorations</h3>
+            <?php include "references_tables/decoration.php";?>
+            <h3>Modifications</h3>
+            <?php include "references_tables/modification.php";?>
           </div>
         </div>
     </div>
