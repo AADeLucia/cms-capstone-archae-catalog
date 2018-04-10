@@ -12,7 +12,7 @@ echo "Returned " . $result->num_rows . " rows";
           if ($row['photographed']){
             echo "<img class=\"catalog_thumbnail\" src=\"artifact_images/".$row['photograph_file']."\">";
           } else {
-            echo "<img class=\"catalog_thumbnail\" src=\"rollins_crest.png\">";
+            echo "<img class=\"catalog_thumbnail\" src=\"media/rollins_crest.png\">";
           }
           echo "</div>";
           echo "<div class=\"col\">";
