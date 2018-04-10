@@ -106,7 +106,11 @@ ul.nav.flex-column{
 
 /*** Catalog Table **/
 #catalog_browse{
+<<<<<<< HEAD
     height: 100%;
+=======
+    height: 100%;    
+>>>>>>> 92400a3e0e5957af5eb5c333ebf4b9373efb670f
 }
 .catalog_thumbnail {
   width: 100%;
@@ -119,3 +123,26 @@ ul.nav.flex-column{
 #catalog_picture {
   align-self: center;
 }
+<<<<<<< HEAD
+=======
+
+/** Login page **/
+
+.form-container{
+  padding: 50px 60px;
+  margin-top: 20vh;
+  -webkit-box-shadow: 10px 10px 30px 10px rgba(0,0,0,0.76);
+  -moz-box-shadow: 10px 10px 30px 10px rgba(0,0,0,0.76);
+  box-shadow: 10px 10px 30px 10px rgba(0,0,0,0.76);
+  background-color: #1b2e84;
+}
+
+.bg{
+  background-image: url('rollins_aerial.jpg') ;
+  background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  height: 100vh;
+
+}
+>>>>>>> 92400a3e0e5957af5eb5c333ebf4b9373efb670f
