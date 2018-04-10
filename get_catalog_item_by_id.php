@@ -10,6 +10,13 @@ if ($conn->connect_error){
     die("Connection failed: " .$conn->connect_error);
 }
 
+<<<<<<< HEAD
+// Prepare
+$sql = "SELECT * FROM catalog WHERE full_catalog_number=". "\"". $catalog_number ."\"";
+
+// Execute statement and print rows
+include "build_cards_user_view.php";
+=======
 // Prepare and bind statement
 $stmt = $conn->prepare("SELECT * FROM Catalog_tbl WHERE Catalog_Number=?");
 $stmt->bind_param("s", $catalog_number);
@@ -59,6 +66,7 @@ echo nl2br("\n" . "Returned " . $result->num_rows . " rows");
 } else{
     echo "<br />ERROR: Could execute \"$sql\". " . $conn->error;
 }
+>>>>>>> 92400a3e0e5957af5eb5c333ebf4b9373efb670f
 
 // Close connection
 $conn->close();

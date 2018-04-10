@@ -39,6 +39,7 @@ if($result = $conn->query($sql)){
               echo "</ul>";
             echo "</div>";
             echo " <a href=\"references.php\" class=\"btn btn-primary\">Delete</a>";
+            echo " <a href=\"references.php\" class=\"btn btn-primary\">Edit</a>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
