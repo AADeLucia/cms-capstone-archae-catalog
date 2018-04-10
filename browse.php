@@ -47,8 +47,8 @@
                   </select>
                 </div>
                 <div class="form-group col">
-                  <label for="material_types[]">Material Type</label>
-                  <select multiple name="material_type" class="form-control">
+                  <label for="material_type">Material Type</label>
+                  <select multiple name="material_types[]" class="form-control">
                     <option selected>---All---</option>
                     <?php $table="material_types"; $column="type_name"; include "fill_select_option.php"; ?>
                   </select>
@@ -90,15 +90,30 @@
             </form>
 
             <hr />
-            <br />
 
             <!-- Show results -->
             <?php
+            // Show catalog item search results
               if(isset($_POST["search_submit"])){
                 $catalog_number = $_POST["catalog_number"];
                 include 'get_catalog_item_by_id.php';
               }
+            // Show browse results
               else if(isset($_POST["browse_submit"])){
+                // Save select form values into array
+                $default_select = "---All---";
+                $selections = array("material"=>$_POST["materials"],
+                "material_type"=>$_POST["material_types"], "form"=>$_POST["forms"],
+              "surface_treatment"=>$_POST["surface_treatments"], "modification"=>$_POST["modifications"],
+            "decoration"=>$_POST["decorations"]);
+
+              // Check if selections were made in all forms
+              foreach ($selections as $key => $val){
+                if ($val[0] == $default_select){
+                  $selections[$key] = NULL;
+                }
+              }
+              // Display results
                 include 'browse_database.php';
               }?>
 
