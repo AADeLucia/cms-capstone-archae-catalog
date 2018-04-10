@@ -24,14 +24,9 @@
             </nav>
           </div>
           <div class="col" id="content_section">
-<<<<<<< HEAD
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-=======
-<<<<<<< HEAD
             <!-- Place references information here -->
-=======
             <div class="panel-group" id="accordion">
->>>>>>> 43271a6a936e9bc8bda0ab2bbf2d7b6aae08199d
               <div class="panel panel-default">
                 <div class="panel-heading active" role="tab" id="headingOne">
                   <h4 class ="panel-title">
