@@ -24,16 +24,16 @@
             </nav>
           </div>
           <div class="col" id="content_section">
-            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel-group" id="accordion">
               <div class="panel panel-default">
-                <div class="panel-heading active" role="tab" id="headingOne">
+                <div class="panel-heading" role="tab" id="headingOne">
                   <h4 class ="panel-title">
-                    <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <a class="collapse" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                         Materials
                     </a>
                   </h4>
                 </div>
-              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class= "panel-body">
                   <?php include "references_tables/materials.php";?>
                 </div>
