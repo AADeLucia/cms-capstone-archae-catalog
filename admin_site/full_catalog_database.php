@@ -38,7 +38,8 @@ if($result = $conn->query($sql)){
               echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Culture Type</span>: " . $row['Culture_Type'] . "</li>";
               echo "</ul>";
             echo "</div>";
-            echo " <a href=\"references.php\" class=\"btn btn-primary\">Delete</a>";
+            echo " <a href=\"\" class=\"btn btn-primary\">Delete</a>";
+            echo " <a href=\"references.php\" class=\"btn btn-primary\">Edit</a>";
             echo "</div>";
             echo "</div>";
             echo "</div>";
