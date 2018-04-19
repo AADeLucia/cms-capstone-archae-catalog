@@ -3,6 +3,7 @@
   if(isset($_POST['user'])){
     if(empty($_POST['user']) || empty($_POST['pass'])) {
      $error = "Username or Password is invalid.";
+     header("Location: login_home.php");
     }
     else{
       $user = $_POST['user'];

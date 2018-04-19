@@ -8,20 +8,28 @@ Deletes an entry from the 'catalog' table where id matches
 // connect to the database
 
 include "remote_db_access.php";
+$conn = new mysqli($servername, $username, $password, $database);
 
 // check if the 'id' variable is set in URL, and check that it is valid
 
-if (isset($_GET['id']) && is_numeric($_GET['id']))
-{
+if( isset($_GET['id'])){
 
 // get id value
-$id = $_GET['id'];
+$id =  "'" . $_GET['id'] . "'";
 
 // delete the entry
+echo "element " . $id . " has been deleted.";
 
-$result = mysql_query("DELETE FROM catalog WHERE Full_Catalog_Number=$id")
+$result = $conn->query("DELETE FROM catalog WHERE full_catalog_number=$id");
 
-or die(mysql_error());
+}
+else{
+  header("Location: index.php");
+}
+
+//or die(mysql_error());
+
+//header("Location: index.php");
 
 
 ?>

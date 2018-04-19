@@ -26,7 +26,7 @@ if($result = $conn->query($sql)){
           //Add modification buttons
           $id = $row['full_catalog_number'];
           //echo "<td><a href='delete_entry.php?id=test' class=\"btn btn-primary\">Delete</a></td>";
-          echo "<td><a href='delete_entry.php?id=".$id."' class=\"btn btn-primary\">Delete</a></td>";
+          echo "<td><a href='delete_entry.php?id=" . $id. "' class=\"btn btn-primary\">Delete</a></td>";
           echo "<td><a href=\"#\" class=\"btn btn-primary\">Edit</a></td>";
 
           // Add column fields
