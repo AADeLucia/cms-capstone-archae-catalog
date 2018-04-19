@@ -24,7 +24,7 @@
             </nav>
           </div>
           <div class="col" id="content_section">
-            <!-- Place add form here -->
+            <?php include 'add_entry_form.php';?>
           </div>
         </div>
     </div>
