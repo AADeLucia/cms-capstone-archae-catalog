@@ -1,6 +1,6 @@
 <?php
-include "local_db_access.php";
-//include "remote_db_access.php";
+//include "local_db_access.php";
+include "remote_db_access.php";
 
 //Create connection
 $conn = new mysqli($servername, $username, $password, $database);
@@ -11,7 +11,7 @@ if ($conn->connect_error){
 }
 
 //Attempt to select query execution
-$sql = "SELECT * FROM modifications";
+$sql = "SELECT * FROM modifications ORDER BY modification_name";
 if ($result = $conn->query($sql)){
   if($result->num_rows > 0){
     echo "<table id = \"catalog_browse\" class=\"table\">";

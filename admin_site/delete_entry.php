@@ -7,8 +7,8 @@ Deletes an entry from the 'catalog' table where id matches
 
 // connect to the database
 
-//include "remote_db_access.php";
-include "local_db_access.php";
+include "remote_db_access.php";
+//include "local_db_access.php";
 $conn = new mysqli($servername, $username, $password, $database);
 
 // check if the 'id' variable is set in URL, and check that it is valid
