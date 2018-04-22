@@ -1,15 +1,6 @@
 <?php
-//include "local_db_access.php";
-include "remote_db_access.php";
-
-//Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error){
-    die("Connection failed: " .$conn->connect_error);
-}
-
+// Build forms
+include "connect_to_database.php";
 $sql = "SELECT * FROM " .$table ;
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){

@@ -37,11 +37,10 @@
                         </div>
                         <!--Modal Content-->
                         <div class="modal-body">
-                          <?php $table="materials"; include "references_modular_table.php";?>
-                        </div>
-                        <!--Modal Footer-->
-                        <div class="modal-footer">
-                          <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
+                          <form action="add_to_reference_table.php?table=materials" method="post">
+                            <?php $table="materials"; include "references_modular_table.php";?>
+                            <button type="submit" class="btn btn-primary">Add</button>
+                          </form>
                         </div>
                       </div>
                     </div>
@@ -74,11 +73,10 @@
                       </div>
                       <!--Modal Content-->
                       <div class="modal-body">
-                        <?php $table="material_types"; include "references_modular_table.php";?>
-                      </div>
-                      <!--Modal Footer-->
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
+                        <form action="add_to_reference_table.php?table=material_types" method="post">
+                          <?php $table="material_types"; include "references_modular_table.php";?>
+                          <button type="submit" class="btn btn-primary">Add</button>
+                        </form>
                       </div>
                     </div>
                   </div>
@@ -111,11 +109,10 @@
                     </div>
                     <!--Modal Content-->
                     <div class="modal-body">
-                      <?php $table="forms"; include "references_modular_table.php";?>
-                    </div>
-                    <!--Modal Footer-->
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
+                      <form action="add_to_reference_table.php?table=forms" method="post">
+                        <?php $table="forms"; include "references_modular_table.php";?>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                      </form>
                     </div>
                   </div>
                 </div>
@@ -148,12 +145,10 @@
                   </div>
                   <!--Modal Content-->
                   <div class="modal-body">
-                    <?php $table="surface_treatments"; include "references_modular_table.php";?>
-                  </div>
-                  <!--Modal Footer-->
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
-                  </div>
+                    <form action="add_to_reference_table.php?table=surface_treatments" method="post">
+                      <?php $table="surface_treatments"; include "references_modular_table.php";?>
+                      <button type="submit" class="btn btn-primary">Add</button>
+                    </form>
                 </div>
               </div>
             </div>
@@ -185,12 +180,10 @@
                 </div>
                 <!--Modal Content-->
                 <div class="modal-body">
-                  <?php $table="decorations"; include "references_modular_table.php";?>
-                </div>
-                <!--Modal Footer-->
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
-                </div>
+                  <form action="add_to_reference_table.php?table=decorations" method="post">
+                    <?php $table="decorations"; include "references_modular_table.php";?>
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </form>
               </div>
             </div>
           </div>
@@ -222,12 +215,10 @@
               </div>
               <!--Modal Content-->
               <div class="modal-body">
-                <?php $table="modifications"; include "references_modular_table.php";?>
-              </div>
-              <!--Modal Footer-->
-              <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Add</button>
-              </div>
+                <form action="add_to_reference_table.php?table=modifications" method="post">
+                  <?php $table="modifications"; include "references_modular_table.php";?>
+                  <button type="submit" class="btn btn-primary">Add</button>
+                </form>
             </div>
           </div>
         </div>
