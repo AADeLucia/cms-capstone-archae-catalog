@@ -7,6 +7,8 @@
             <li class = "nav-item"><a class = "nav-link" href="add_entry.php">Add Entry</a></li>
             <li class = "nav-item"><a class = "nav-link" href="baglog_browse.php">Bag Log</a></li>
             <li class = "nav-item"><a class = "nav-link" href="references.php">References</a></li>
+            <li class = "nav-item"><a class = "nav-link" href="front_page_maintenance.php">Front Page Maintenance</a></li>
+
         </ul>
     </div>
 </nav>

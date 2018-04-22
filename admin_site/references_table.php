@@ -9,9 +9,11 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error){
     die("Connection failed: " .$conn->connect_error);
 }
-$sql = "SELECT * FROM " .$table;
+$sql = "SELECT * FROM " .$table . " ORDER BY  " . $col  ;
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){
+      //Begin table
+      echo "<table id=\"catalog_browse\" class=\"table\">";
       // Print columns
       $raw_columns = array_slice($result->fetch_fields(), 1); // Get rid of "ID column"
       $columns = array();
@@ -20,15 +22,26 @@ if($result = $conn->query($sql)){
         $columns[] = array('field'=>$col->name, 'name'=>$formatted_name);
       }
 
+      //Print header names
+      echo "<tr>";
+        foreach ($columns as $col){
+          echo "<th>".$col['name']."</th>";
+      }
+      echo "</tr>";
+
       // Print rows
       while($row = $result->fetch_array()){
-        foreach ($columns as $col) {
-          printf("%s: %s", $col['name'], $row[$col['field']]);
-          printf("   ");
+        echo "<tr>";
+        //Add column fields
+        foreach ($columns as $col){
+          echo "<td>" . $row[$col['field']] . "</td>";
         }
-        echo nl2br("\n");
-      }
+        echo "</tr>";
     }
+    // End table
+    echo "</table>";
+
+  }
 }
 
 // Close connection
