@@ -10,16 +10,7 @@
    <div id="body_content" class="container-fluid">
      <div class="row">
         <div class="col-lg-2 col-md-1 col-sm-12 col-xs-12" id="sidebar_section">
-          <nav class = "sidebar">
-              <div class="sidebar-sticky">
-                  <ul class = "nav flex-column">
-                      <li class = "nav-item active"><a class = "nav-link" href="#">Home</a></li>
-                      <li class = "nav-item"><a class = "nav-link" href="full_catalog.php">Full Catalog</a></li>
-                      <li class = "nav-item"><a class = "nav-link" href="browse.php">Browse</a></li>
-                      <li class = "nav-item"><a class = "nav-link" href="contact_form.php">Contact</a></li>
-                  </ul>
-              </div>
-          </nav>
+          <?php include 'nav_bar.php';?>
         </div>
         <div class="col-lg-10 col-md-11 d-none d-md-block" id="content_section">
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
