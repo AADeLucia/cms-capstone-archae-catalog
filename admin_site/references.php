@@ -18,13 +18,13 @@
                 <div class="panel-heading" role="tab" id="headingOne">
                   <h4 class ="panel-title">
                     <a class="collapse" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        Materials
+                        Materials 
                     </a>
                   </h4>
                 </div>
               <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class= "panel-body">
-                  <?php include "references_tables/materials.php";?>
+                  <?php $table = "materials"; $col = "material_name"; include "references_table.php";?>
                 </div>
               </div>
             </div>
@@ -39,7 +39,7 @@
               </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
               <div class= "panel-body">
-                <?php include "references_tables/material_types.php";?>
+                <?php $table = "material_types"; $col = "type_name"; include "references_table.php";?>
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@
             </div>
           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
             <div class= "panel-body">
-              <?php include "references_tables/form_table.php";?>
+              <?php $table = "forms"; $col = "form_name"; include "references_table.php";?>
             </div>
           </div>
         </div>
@@ -69,7 +69,7 @@
           </div>
         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
           <div class= "panel-body">
-            <?php include "references_tables/surface_treatment.php";?>
+            <?php $table = "surface_treatments"; $col = "treatment_name"; include "references_table.php";?>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@
         </div>
       <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
         <div class= "panel-body">
-          <?php include "references_tables/decoration.php";?>
+          <?php $table = "decorations"; $col = "decoration_name"; include "references_table.php"; ?>
         </div>
       </div>
     </div>
@@ -99,7 +99,7 @@
       </div>
     <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
       <div class= "panel-body">
-        <?php include "references_tables/modification.php";?>
+        <?php $table = "modifications"; $col = "modification_name"; include "references_table.php";?>
       </div>
     </div>
   </div>
