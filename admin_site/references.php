@@ -18,12 +18,13 @@
                 <div class="panel-heading" role="tab" id="headingOne">
                   <h4 class ="panel-title">
                     <a class="collapse" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        Materials 
+                      Materials
                     </a>
                   </h4>
                 </div>
               <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class= "panel-body">
+                  <a href="#" class="btn btn-primary">Add New Material</a>
                   <?php $table = "materials"; $col = "material_name"; include "references_table.php";?>
                 </div>
               </div>
@@ -39,6 +40,7 @@
               </div>
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
               <div class= "panel-body">
+                <a href="#" class="btn btn-primary">Add New Material Type</a>
                 <?php $table = "material_types"; $col = "type_name"; include "references_table.php";?>
               </div>
             </div>
@@ -54,6 +56,7 @@
             </div>
           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
             <div class= "panel-body">
+              <a href="#" class="btn btn-primary">Add New Form</a>
               <?php $table = "forms"; $col = "form_name"; include "references_table.php";?>
             </div>
           </div>
@@ -69,6 +72,7 @@
           </div>
         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
           <div class= "panel-body">
+            <a href="#" class="btn btn-primary">Add New Surface Treatment</a>
             <?php $table = "surface_treatments"; $col = "treatment_name"; include "references_table.php";?>
           </div>
         </div>
@@ -84,6 +88,7 @@
         </div>
       <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
         <div class= "panel-body">
+          <a href="#" class="btn btn-primary">Add New Decoration</a>
           <?php $table = "decorations"; $col = "decoration_name"; include "references_table.php"; ?>
         </div>
       </div>
@@ -99,6 +104,7 @@
       </div>
     <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
       <div class= "panel-body">
+        <a href="#" class="btn btn-primary">Add New Modification</a>
         <?php $table = "modifications"; $col = "modification_name"; include "references_table.php";?>
       </div>
     </div>
