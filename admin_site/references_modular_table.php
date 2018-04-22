@@ -9,7 +9,8 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error){
     die("Connection failed: " .$conn->connect_error);
 }
-$sql = "SELECT * FROM " .$table;
+
+$sql = "SELECT * FROM " .$table ;
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){
       // Print columns
@@ -20,15 +21,16 @@ if($result = $conn->query($sql)){
         $columns[] = array('field'=>$col->name, 'name'=>$formatted_name);
       }
 
-      // Print rows
-      while($row = $result->fetch_array()){
-        foreach ($columns as $col) {
-          printf("%s: %s", $col['name'], $row[$col['field']]);
-          printf("   ");
-        }
-        echo nl2br("\n");
+      //Print header names
+        foreach ($columns as $col){
+          echo "<div class='form-group'>";
+          echo "<label>" .$col['name']. "</label>";
+          echo "<input type='text' class='form-control' name=" .$col['field'].">";
+          echo "</div>";
       }
-    }
+  }
+} else {
+  echo "error";
 }
 
 // Close connection
