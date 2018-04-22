@@ -5,7 +5,7 @@
             <li class = "nav-item"><a class = "nav-link" href="index.php">Full Catalog</a></li>
             <li class = "nav-item"><a class = "nav-link" href="browse.php">Browse</a></li>
             <li class = "nav-item"><a class = "nav-link" href="add_entry.php">Add Entry</a></li>
-            <li class = "nav-item"><a class = "nav-link" href="bag_log.php">Bag Log</a></li>
+            <li class = "nav-item"><a class = "nav-link" href="baglog_browse.php">Bag Log</a></li>
             <li class = "nav-item"><a class = "nav-link" href="references.php">References</a></li>
         </ul>
     </div>
