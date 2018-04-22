@@ -37,7 +37,7 @@
                         </div>
                         <!--Modal Content-->
                         <div class="modal-body">
-                          HIIII.
+                          <?php $table="materials"; include "references_modular_table.php";?>
                         </div>
                         <!--Modal Footer-->
                         <div class="modal-footer">
@@ -74,7 +74,7 @@
                       </div>
                       <!--Modal Content-->
                       <div class="modal-body">
-                        Wat up.
+                        <?php $table="material_types"; include "references_modular_table.php";?>
                       </div>
                       <!--Modal Footer-->
                       <div class="modal-footer">
@@ -111,7 +111,7 @@
                     </div>
                     <!--Modal Content-->
                     <div class="modal-body">
-                      YAAAAS.
+                      <?php $table="forms"; include "references_modular_table.php";?>
                     </div>
                     <!--Modal Footer-->
                     <div class="modal-footer">
@@ -148,7 +148,7 @@
                   </div>
                   <!--Modal Content-->
                   <div class="modal-body">
-                    That is what I did right there.
+                    <?php $table="surface_treatments"; include "references_modular_table.php";?>
                   </div>
                   <!--Modal Footer-->
                   <div class="modal-footer">
@@ -185,7 +185,7 @@
                 </div>
                 <!--Modal Content-->
                 <div class="modal-body">
-                  Yo.
+                  <?php $table="decorations"; include "references_modular_table.php";?>
                 </div>
                 <!--Modal Footer-->
                 <div class="modal-footer">
@@ -222,7 +222,7 @@
               </div>
               <!--Modal Content-->
               <div class="modal-body">
-                Hayyyyyyyy gurl.
+                <?php $table="modifications"; include "references_modular_table.php";?>
               </div>
               <!--Modal Footer-->
               <div class="modal-footer">
