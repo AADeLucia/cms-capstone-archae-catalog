@@ -13,6 +13,7 @@
             <?php include 'admin_nav_bar.php';?>
           </div>
           <div class="col" id="content_section">
+            <!-- Content Here -->
             <?php include 'add_entry_form.php';?>
           </div>
         </div>
