@@ -14,6 +14,12 @@
           </div>
 
     <div class="col-lg-10 col-md-11 col-sm-11 col-xs-11" id="content_section">
+      <h4>Update Carousel Photos:</h4>
+      <form action= "upload.php" method="post" enctype="multipart/form-data">
+        Select image to upload:
+        <input type="file" name="fileToUpload" id="fileToUpload">
+        <input type="submit" value="Upload Image" name="submit">
+      </form>
     </div>
 </div>
 </div>
