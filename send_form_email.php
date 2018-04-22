@@ -1,10 +1,11 @@
 <?php
+// Check if email was entered in form
 if(isset($_POST['email'])) {
 
     // EDIT THE 2 LINES BELOW AS REQUIRED
-    $email_to = "abaxter@rollin.edu";
+    $email_to = "abaxter@rollins.edu";
     $server_email ="rcal@rollins.edu";
-    $email_subject = "RCAL Collection Request Submission";
+    $email_subject = "RCAL Collection Request";
 
     function died($error) {
         // your error code can go here
@@ -15,7 +16,6 @@ if(isset($_POST['email'])) {
         die();
     }
 
-
     // validation expected data exists
     if(!isset($_POST['first_name']) ||
         !isset($_POST['last_name']) ||
@@ -24,8 +24,6 @@ if(isset($_POST['email'])) {
         !isset($_POST['comments'])) {
         died('We are sorry, but there appears to be a problem with the form you submitted.');
     }
-
-
 
     $first_name = $_POST['first_name']; // required
     $last_name = $_POST['last_name']; // required
@@ -78,7 +76,7 @@ if(isset($_POST['email'])) {
 $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$server_email."\r\n" .
 'X-Mailer: PHP/' . phpversion();
-mail($email_to, $email_subject, $email_message, $headers, '-f rcal@rollins.edu');  
+mail($email_to, $email_subject, $email_message, $headers, '-f rcal@rollins.edu');
 ?>
 
 <!-- include your own success html here -->
