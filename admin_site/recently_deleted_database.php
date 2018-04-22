@@ -14,7 +14,26 @@
           </div>
 
     <div class="col-lg-10 col-md-11 col-sm-11 col-xs-11" id="content_section">
-      <?php include 'full_catalog_database.php';?>
+      <?php
+      include "remote_db_access.php";
+      //include "local_db_access.php";
+
+      //Create connection
+      $conn = new mysqli($servername, $username, $password, $database);
+
+      //Check connection
+      if ($conn->connect_error){
+          die("Connection failed: " .$conn->connect_error);
+      }
+
+      // Attempt select query execution
+      $sql = "SELECT * FROM recently_deleted";
+
+      include "recently_deleted_database_view.php";
+
+      // Close connection
+      $conn->close();
+      ?>
   </div>
 </div>
 </div>

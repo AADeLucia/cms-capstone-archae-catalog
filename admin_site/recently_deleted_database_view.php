@@ -12,8 +12,7 @@ if($result = $conn->query($sql)){
         $columns[] = array('field'=>$col->name, 'name'=>$formatted_name);
       }
       echo "<tr>";
-      echo "<th>Delete</th>";
-      echo "<th>Edit</th>";
+      echo "<th>Restore</th>";
         foreach ($columns as $col){
           echo "<th>".$col['name']."</th>";
         }
@@ -25,9 +24,7 @@ if($result = $conn->query($sql)){
 
           //Add modification buttons
           $id = $row['full_catalog_number'];
-          echo "<td><a href='#' data-toggle=\"modal\" data-target=\"#myModal\"class=\"btn btn-primary\">Delete</a></td>";
-          echo "<td><a href=\"#\" class=\"btn btn-primary\">Edit</a></td>";
-          //'delete_entry.php?id=" . $id. "'
+          echo "<td><a href='#' data-toggle=\"modal\" data-target=\"#myModal\"class=\"btn btn-primary\">Restore</a></td>";
           // Add column fields
           foreach ($columns as $col){
             echo "<td>" . $row[$col['field']] . "</td>";
