@@ -1,36 +1,30 @@
 <?php
-
 /*
 delete_entry.php
 Deletes an entry from the 'catalog' table where id matches
 */
 
-// connect to the database
+include "head.php";
+echo "<head><title>Delete Entry</title><style>body{background-color: white;};</style></head>";
 
-include "remote_db_access.php";
-//include "local_db_access.php";
-$conn = new mysqli($servername, $username, $password, $database);
+// Connect to the database
+include "connect_to_database.php";
 
-// check if the 'id' variable is set in URL, and check that it is valid
+// Check if the 'id' variable is set in URL, and check that it is valid
+if(isset($_GET['id'])){
+  // Get id value
+  $id =  "'" . $_GET['id'] . "'";
+  $sql = "DELETE FROM catalog WHERE full_catalog_number=$id";
 
-if( isset($_GET['id'])){
-
-// get id value
-$id =  "'" . $_GET['id'] . "'";
-
-// delete the entry
-echo "element " . $id . " has been deleted.";
-
-$result = $conn->query("DELETE FROM catalog WHERE full_catalog_number=$id");
-
-}
-else{
+  // Delete the entry
+  if($result = $conn->query($sql)){
+    echo "Element " . $id . " has been deleted.";
+    echo "<br />";
+    echo "<a class='btn btn-primary' href='index.php' role='button'>Go to Full Catalog</a>";
+  } else {
+    echo "<br />ERROR: Could not execute \"$sql\". " . $conn->error;
+  }
+} else{
   header("Location: index.php");
 }
-
-//or die(mysql_error());
-
-//header("Location: index.php");
-
-
 ?>
