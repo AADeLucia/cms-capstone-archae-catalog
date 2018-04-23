@@ -2,6 +2,7 @@
 include "head.php";
 echo "<head><title>Add to Reference Table</title><style>body{background-color: white;};</style></head>";
 $target_dir= "../media/carousel/";
+//$target_dir = $_GET['dir'];
 $target_file= $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
@@ -49,5 +50,4 @@ if($uploadOk == 0){
     echo "Sorry, there was an error uploading your file.";
   }
 }
-
 ?>

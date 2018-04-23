@@ -1,6 +1,6 @@
 <h1>New Catalog Entry</h1>
 <h6>Please fill all required fields</h6>
-<form action="add_entry_to_catalog.php" method="post">
+<form action="add_entry_to_catalog.php" method="post" enctype="multipart/form-data">
 
   <h2>Basic Information</h2>
   <div class="row">

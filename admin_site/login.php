@@ -9,9 +9,8 @@
       $user = $_POST['user'];
       $pass = $_POST['pass'];
 
-      include 'remote_db_access.php';
+      include "connect_to_database.php";
 
-      $conn = new mysqli($servername, $username, $password, $database);
       $stmt = "SELECT * from users WHERE pass='$pass' AND user='$user'";
 
       if($result = $conn->query($stmt)){
