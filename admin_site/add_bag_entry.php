@@ -2,7 +2,7 @@
 <html>
     <?php include 'head.php';?>
     <head>
-        <title>Add Bag Log</title>
+        <title>Add Bag Log Entry</title>
     </head>
 <body>
     <?php include 'rollins_header.php';?>
@@ -13,6 +13,7 @@
             <?php include 'admin_nav_bar.php';?>
           </div>
           <div class="col" id="content_section">
+            <!-- Content Here -->
             <?php include 'bag_entry_form.php';?>
           </div>
         </div>
