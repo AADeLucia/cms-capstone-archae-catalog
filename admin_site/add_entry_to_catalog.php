@@ -16,10 +16,6 @@ foreach ($_POST as $key => $value){
   }
 }
 
-foreach($insert_values as $key=>$val){
-  echo $key . ": " . $val . "; ";
-}
-
 // Prepare insert statement
 $sql = "INSERT into catalog (";
   foreach($insert_values as $key => $val){
