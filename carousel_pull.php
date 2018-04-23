@@ -1,11 +1,25 @@
 <?php
-$dir = "../media/carousel/";
+$dir = "media/carousel/";
 $files = array_slice(scandir($dir), 2);
 
+//Indicators for carousel
+$indicator_count=0;
+echo "<ul class='carousel-indicators'>";
+foreach($files as $f){
+  if($indicator_count=0){
+    echo "<li data-target='#myCarousel' data-slide-to=". $indicator_count ." class='active'></li>";
+  } else {
+    echo "<li data-target='#myCarousel' data-slide-to=". $indicator_count ."></li>";
+  }
+}
+echo "</ul>";
+
+//Items for carousel
+$count=0;
 echo "<div class='carousel-inner'>";
-for($i = 0; $i <= count($files); $i++){
-  $src = $dir . $files[i];
-  if($i == 0) {
+foreach($files as $f){
+  $src = $dir . $f;
+  if($count == 0) {
     echo "<div class='carousel-item active'>";
       echo "<img src=" .$src. ">";
     echo "</div>";
@@ -14,7 +28,7 @@ for($i = 0; $i <= count($files); $i++){
       echo "<img src=" .$src. ">";
     echo "</div>";
   }
-
+  ++$count;
 }
 echo "</div>";
- ?>
+?>
