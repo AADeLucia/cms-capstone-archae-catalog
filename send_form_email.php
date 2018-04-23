@@ -71,10 +71,10 @@ if(isset($_POST['email'])) {
     $email_message .= "Comments: ".clean_string($comments)."\n";
 
 // create email headers
-//$headers = 'From: '.$email_from."\r\n".
-$headers = 'From: '.$server_email."\r\n".
+$headers = 'From: '.$server_email. "\r\n".
 'Reply-To: '.$server_email."\r\n" .
 'X-Mailer: PHP/' . phpversion();
+
 mail($email_to, $email_subject, $email_message, $headers, '-f rcal@rollins.edu');
 ?>
 
@@ -83,7 +83,5 @@ mail($email_to, $email_subject, $email_message, $headers, '-f rcal@rollins.edu')
 Thank you for contacting us. We will be in touch with you very soon!
 
 <?php
-echo $email_message;
-
 }
 ?>
