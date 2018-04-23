@@ -1,62 +1,47 @@
 <?php
+include "head.php";
+echo "<head><title>Add to Reference Table</title><style>body{background-color: white;};</style></head>";
+include "connect_to_database.php";
+
 // Get Variables
 // IMPORTANT: Sore variables in same order as columns in table
-$values = array();
-$values[] = $_POST["full_catalog_number"];
-$values[] = $_POST["baglog_number"];
-$values[] = $_POST["catalog_number"];
-$values[] = $_POST["size_fraction"];
-$values[] = $_POST["material"];
-$values[] = $_POST["material_type"];
-$values[] = $_POST["form"];
-$values[] = $_POST["decoration"];
-$values[] = $_POST["surface_treatment"];
-$values[] = $_POST["modification"];
-$values[] = $_POST["count"];
-$values[] = $_POST["weight"];
-$values[] = $_POST["culture_type"];
-$values[] = $_POST["notes"];
-$values[] = $_POST["collection_issue"];
-$values[] = $_POST["collection_issue_note"];
-$values[] = $_POST["cataloger_initials"];
-$values[] = $_POST["entry_date"];
-$values[] = $_POST["de_date"];
-$values[] = $_POST["de_intials"];
-$values[] = $_POST["photographed"];
-$values[] = $_POST["photo_file"];
-
-echo count($values);
-foreach ($values as $val){
-  echo $val;
+$insert_values = array();
+foreach ($_POST as $key => $value){
+  if(!empty($value)){
+    if($key=="collection_issue" || $key=="photographed"){
+      $insert_values[$key] = '1';
+    } else {
+      $insert_values[$key] = "'" . $value . "'";
+    }
+  }
 }
 
-return;
-
-include "local_db_access.php";
-//include "remote_db_access.php";
-
-//Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error){
-    die("Connection failed: " .$conn->connect_error);
+foreach($insert_values as $key=>$val){
+  echo $key . ": " . $val . "; ";
 }
 
 // Prepare insert statement
-$sql = "INSERT into catalog VALUES ";
-foreach($values as $val){
-  $sql .= $val;
-}
-$sql .= ")";
+$sql = "INSERT into catalog (";
+  foreach($insert_values as $key => $val){
+  $sql .= $key . ",";
+  }
+  $sql = substr($sql, 0, -1) . ")"; // remove last comma
+  $sql .= " VALUES (";
+  foreach ($insert_values as $key => $val){
+    $sql .= $val . ",";
+  }
+  $sql = substr($sql, 0, -1) . ")"; // remove last comma
 
-// Execute statement
-if($result=$conn->query($sql)){
-  echo "added entry";
-} else{
+  // Execute statement
+  if($result=$conn->query($sql)){
+    echo "Entry was successfully added.";
+    echo "<br />";
+    echo "<a class='btn btn-primary' href='index.php' role='button'>Go to Full Catalog</a>";
+    echo "<a class='btn btn-primary' href='add_entry.php' role='button'>Add another entry</a>";
+  } else{
     echo "<br />ERROR: Could execute \"$sql\". " . $conn->error;
-}
+  }
 
-// Close connection
-$conn->close();
-?>
+  // Close connection
+  $conn->close();
+  ?>
