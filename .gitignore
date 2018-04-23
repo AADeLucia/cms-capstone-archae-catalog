@@ -4,5 +4,5 @@
 html-practice/
 
 # Get rid of unneeded files
-.DS_Store
+*.DS_Store
 info.php
