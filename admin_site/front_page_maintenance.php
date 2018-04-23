@@ -20,6 +20,7 @@
         <input type="file" name="fileToUpload" id="fileToUpload">
         <input type="submit" value="Upload Image" name="submit">
       </form>
+      <?php include "display_photos.php";?>
     </div>
 </div>
 </div>
