@@ -23,7 +23,7 @@
             </ul>
 
             <!-- The slideshow -->
-            <?php inlcude "carousel_pull.php";?>
+            <?php include 'carousel_pull.php';?>
 
             <!-- Left and right controls -->
             <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
