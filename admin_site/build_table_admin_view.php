@@ -26,7 +26,7 @@ if($result = $conn->query($sql)){
           //Add modification buttons
           $id = $row['full_catalog_number'];
           echo "<td><a href='delete_entry.php?id=" . $id. "' class=\"btn btn-primary\">Delete</a></td>";
-          echo "<td><a href=\"#\" class=\"btn btn-primary\">Edit</a></td>";
+          echo "<td><a href='edit_entry_form.php?id=" . $id. "' class=\"btn btn-primary\">Edit</a></td>";
 
           // Add column fields
           foreach ($columns as $col){
@@ -44,6 +44,6 @@ if($result = $conn->query($sql)){
         echo "No records matching your query were found.";
     }
 } else{
-    echo "<br />ERROR: Could execute \"$sql\". " . $conn->error;
+    echo "<br />ERROR: Could not execute \"$sql\". " . $conn->error;
 }
 ?>
