@@ -29,19 +29,23 @@
     <div class = "col">
       <div class="form-group">
         <label for="material">Material</label>
-        <input type="text" class="form-control" name="material">
+        <select name="material" class="form-control">
+          <?php $table="materials"; $column="material_name"; include "fill_select_option.php"; ?>
+        </select>
       </div>
     </div>
     <div class="col">
       <div class="form-group">
         <label for="material_type">Material Type</label>
-        <input type="text" class="form-control" name="material_type">
+        <select name="material_type" class="form-control">
+          <?php $table="material_types"; $column="type_name"; include "fill_select_option.php"; ?>
+        </select>
       </div>
     </div>
     <div class="col">
       <div class="form-group">
         <label for="size_fraction">Size Fraction</label>
-        <input type="number" class="form-control" name="size_fraction">
+        <input type="text" class="form-control" name="size_fraction">
       </div>
     </div>
 
@@ -51,19 +55,25 @@
     <div class="col">
       <div class="form-group">
         <label for="decoration">Decoration</label>
-        <input type="text" class="form-control" name="decoration">
+        <select name="decoration" class="form-control">
+          <?php $table="decorations"; $column="decoration_name"; include "fill_select_option.php"; ?>
+        </select>
       </div>
     </div>
     <div class = "col">
       <div class="form-group">
         <label for="surface_treatment">Surface Treatment</label>
-        <input type="text" class="form-control" name="surface_treatment">
+        <select name="surface_treatment" class="form-control">
+          <?php $table="surface_treatments"; $column="treatment_name"; include "fill_select_option.php"; ?>
+        </select>
       </div>
     </div>
     <div class="col">
       <div class="form-group">
         <label for="form">Form</label>
-        <input type="text" class="form-control" name="form">
+        <select name="form" class="form-control">
+          <?php $table="forms"; $column="form_name"; include "fill_select_option.php"; ?>
+        </select>
       </div>
     </div>
   </div>
@@ -78,7 +88,9 @@
     <div class="col">
       <div class="form-group">
         <label for="modification">Modification</label>
-        <input type="text" class="form-control" name="modification">
+        <select name="modification" class="form-control">
+          <?php $table="modifications"; $column="modification_name"; include "fill_select_option.php"; ?>
+        </select>
       </div>
     </div>
     <div class="col">
@@ -120,7 +132,7 @@
       <div class="col">
         <div class="form-group">
           <label for="cataloger_initials">Cataloger's Initials</label>
-          <input type="text" class="form-control" name="catalogers_initials" maxlength="3">
+          <input type="text" class="form-control" name="catalogers_initials">
         </div>
       </div>
       <div class="col">
@@ -137,7 +149,7 @@
       <div class="col">
         <div class="form-group">
           <label for="de_initials">Excavator Initials</label>
-          <input type="text" class="form-control" name="DE_initials" maxlength="3">
+          <input type="text" class="form-control" name="DE_initials">
         </div>
       </div>
 

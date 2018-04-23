@@ -1,6 +1,6 @@
 <?php
-include "local_db_access.php";
-//include "remote_db_access.php";
+//include "local_db_access.php";
+include "remote_db_access.php";
 
 //Create connection
 $conn = new mysqli($servername, $username, $password, $database);

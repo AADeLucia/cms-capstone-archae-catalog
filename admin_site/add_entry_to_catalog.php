@@ -39,7 +39,7 @@ $sql = "INSERT into catalog (";
 
 
   } else{
-    echo "<br />ERROR: Could execute \"$sql\". " . $conn->error;
+    echo "<br />ERROR: Could not execute \"$sql\". " . $conn->error;
   }
 
   // Close connection
