@@ -1,4 +1,6 @@
 <?php
+include "head.php";
+echo "<head><title>Add to Reference Table</title><style>body{background-color: white;};</style></head>";
 $target_dir= "../media/carousel/";
 $target_file= $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -41,6 +43,8 @@ if($uploadOk == 0){
 } else{
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)){
     echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
+    echo "<br />";
+    echo "<a class='btn btn-primary' href='front_page_maintenance.php' role='button'>Return to Front Page Maintenance</a>";
   } else {
     echo "Sorry, there was an error uploading your file.";
   }
