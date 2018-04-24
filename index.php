@@ -16,24 +16,8 @@
           <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
             <!-- Indicators -->
-            <ul class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ul>
-
             <!-- The slideshow -->
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="media/Indy.jpeg" alt="Indy">
-              </div>
-              <div class="carousel-item">
-                <img src="media/Indy2.jpg" alt="Indy2">
-              </div>
-              <div class="carousel-item">
-                <img src="media/Indy3.jpg" alt="Indy3">
-              </div>
-            </div>
+            <?php include 'carousel_pull.php';?>
 
             <!-- Left and right controls -->
             <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">

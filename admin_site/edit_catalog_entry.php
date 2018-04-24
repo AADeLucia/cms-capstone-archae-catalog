@@ -2,7 +2,7 @@
 <html>
     <?php include 'head.php';?>
     <head>
-        <title>Add Entry</title>
+        <title>Edit Entry</title>
     </head>
 <body>
     <?php include 'rollins_header.php';?>
@@ -14,7 +14,7 @@
           </div>
           <div class="col" id="content_section">
             <!-- Content Here -->
-            <?php include 'add_entry_form.php';?>
+            <?php include 'edit_entry_form.php';?>
           </div>
         </div>
     </div>

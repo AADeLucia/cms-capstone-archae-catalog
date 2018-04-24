@@ -2,7 +2,6 @@
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){
       // Begin table
-
       echo "<table id=\"catalog_browse\" class=\"table\">";
       // Create the columns
       $raw_columns = $result->fetch_fields();
@@ -18,17 +17,15 @@ if($result = $conn->query($sql)){
           echo "<th>".$col['name']."</th>";
         }
       echo "</tr>";
-
         while($row = $result->fetch_array()){
           // Build table row
           echo "<tr>";
-
           //Add modification buttons
           $id = $row['full_catalog_number'];
           echo "<td><a href='#' data-toggle=\"modal\" data-target='#myModal" . $id . "' class=\"btn btn-primary\">Delete</a></td>";
-          echo "<td><a href=\"#\" class=\"btn btn-primary\">Edit</a></td>";
-          //'delete_entry.php?id=" . $id. "'
-          // Add column fields
+          echo "<td><a href='edit_entry_form.php?id=" . $id. "' class=\"btn btn-primary\">Edit</a></td>";
+
+          // Modal for confirmation of delete
 
           echo "<div class=\"modal fade\" id='myModal" . $id . "' tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
                   <div class=\"modal-dialog\">
@@ -48,23 +45,20 @@ if($result = $conn->query($sql)){
                   </div>
                 </div>";
 
+          // Add column fields
           foreach ($columns as $col){
             echo "<td>" . $row[$col['field']] . "</td>";
           }
           echo "</tr>";
         }
-
         // End table
         echo "</table>";
-
-
-
         // Free result set
         $result->free();
     } else{
         echo "No records matching your query were found.";
     }
 } else{
-    echo "<br />ERROR: Could execute \"$sql\". " . $conn->error;
+    echo "<br />ERROR: Could not execute \"$sql\". " . $conn->error;
 }
 ?>

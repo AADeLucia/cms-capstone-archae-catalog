@@ -97,7 +97,6 @@
                   "material_type"=>$_POST["material_types"], "form"=>$_POST["forms"],
                 "surface_treatment"=>$_POST["surface_treatments"], "modification"=>$_POST["modifications"],
               "decoration"=>$_POST["decorations"]);
-
                 // Check if selections were made in all forms
                 foreach ($selections as $key => $val){
                   if ($val[0] == $default_select){

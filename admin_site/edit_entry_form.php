@@ -1,3 +1,28 @@
+<?php
+$id= "'" . $_GET['id'] . "'";
+include "connect_to_database.php";
+// Prepare
+$sql = "SELECT * FROM catalog WHERE full_catalog_number=$id";
+$current_values = array();
+if($result = $conn->query($sql)){
+  $row = $result->fetch_array();
+  print_r($row);
+
+  return;
+
+  $fields = $result->fetch_fields();
+  $columns = array();
+  foreach ($fields as $field){
+    $current_values[$field->name] =
+    $formatted_name = ucwords(str_replace("_", " ", $col->name));
+    $columns[] = array('field'=>$col->name, 'name'=>$formatted_name);
+  }
+} else{
+  echo "<br />ERROR: Could not execute \"$sql\". " . $conn->error;
+}
+print_r($current_values);
+?>
+
 <h1>New Catalog Entry</h1>
 <h6>Please fill all required fields</h6>
 <form action="add_entry_to_catalog.php" method="post" enctype="multipart/form-data">

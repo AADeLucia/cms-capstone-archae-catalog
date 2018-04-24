@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD:admin_site/test.php
 //include "local_db_access.php";
 include "remote_db_access.php";
 
@@ -9,6 +10,10 @@ $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error){
     die("Connection failed: " .$conn->connect_error);
 }
+=======
+include "connect_to_database.php";
+
+>>>>>>> f43c9037e729daa0fa1b7fcbd8e2a1c770aa384a:admin_site/test.php
 $sql = "SELECT * FROM " .$table;
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){
