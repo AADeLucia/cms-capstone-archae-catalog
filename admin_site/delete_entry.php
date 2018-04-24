@@ -19,14 +19,11 @@ if( isset($_GET['id'])){
 $id =  "'" . $_GET['id'] . "'";
 
 // delete the entry
-
-$sql = "INSERT INTO test.recently_deleted SELECT * FROM test.catalog WHERE full_catalog_number=$id;" ;
+$sql = "INSERT INTO test.recently_deleted select * , CURDATE() from catalog WHERE  full_catalog_number=$id;";
 $sql .= "DELETE FROM test.catalog WHERE full_catalog_number=$id;";
 
 
 $result = $conn->multi_query($sql);
-
-/* close connection */
 
 echo "element " . $id . " has been deleted.";
 

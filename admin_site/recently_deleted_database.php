@@ -27,7 +27,7 @@
       }
 
       // Attempt select query execution
-      $sql = "SELECT * FROM recently_deleted";
+      $sql = "SELECT * FROM recently_deleted ORDER BY date_deleted ASC";
 
       include "recently_deleted_database_view.php";
 

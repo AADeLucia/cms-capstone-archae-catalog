@@ -39,15 +39,14 @@ if($result = $conn->query($sql)){
                 <div class=\"modal-dialog\">
                   <div class=\"modal-content\">
                     <div class=\"modal-header\">
-                      <button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">x</button>
                       <h4 class=\"modal-title\">Are you sure?</h4>
                     </div>
                     <div class=\"modal-body\">
-                      Are you sure you want to delete?
+                      Are you sure you want to restore?
                     </div>
                     <div class=\"modal-footer\">
                       <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Close</button>
-                      <a href= 'delete_entry.php?id=" . $id. "' class=\"btn btn-primary\">Delete</a>
+                      <a href= '#' class=\"btn btn-primary\">Restore</a>
                     </div>
                   </div>
                 </div>
