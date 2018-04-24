@@ -24,7 +24,27 @@ if($result = $conn->query($sql)){
 
           //Add modification buttons
           $id = $row['full_catalog_number'];
-          echo "<td><a href='#' data-toggle=\"modal\" data-target=\"#myModal\"class=\"btn btn-primary\">Restore</a></td>";
+          echo "<td><a href='#' data-toggle=\"modal\" data-target=\"#myModal" . $id . "\"class=\"btn btn-primary\">Restore</a></td>";
+
+          // Modal for confirmation of restore
+
+          echo "<div class=\"modal fade\" id='myModal" . $id . "' tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
+                  <div class=\"modal-dialog\">
+                    <div class=\"modal-content\">
+                      <div class=\"modal-header\">
+                        <h4 class=\"modal-title\">Are you sure?</h4>
+                      </div>
+                      <div class=\"modal-body\">
+                        Are you sure you want to delete?
+                      </div>
+                      <div class=\"modal-footer\">
+                        <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Close</button>
+                        <a href= 'restore_entry.php?id=" . $id . "' class=\"btn btn-primary\">Restore</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>";
+
           // Add column fields
           foreach ($columns as $col){
             echo "<td>" . $row[$col['field']] . "</td>";
@@ -35,22 +55,7 @@ if($result = $conn->query($sql)){
         // End table
         echo "</table>";
 
-        echo "<div class=\"modal fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby=\"myModalLabel\" aria-hidden=\"true\">
-                <div class=\"modal-dialog\">
-                  <div class=\"modal-content\">
-                    <div class=\"modal-header\">
-                      <h4 class=\"modal-title\">Are you sure?</h4>
-                    </div>
-                    <div class=\"modal-body\">
-                      Are you sure you want to restore?
-                    </div>
-                    <div class=\"modal-footer\">
-                      <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Close</button>
-                      <a href= '#' class=\"btn btn-primary\">Restore</a>
-                    </div>
-                  </div>
-                </div>
-              </div>";
+
 
         // Free result set
         $result->free();
