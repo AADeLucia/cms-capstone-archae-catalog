@@ -8,6 +8,7 @@
             <li class = "nav-item"><a class = "nav-link" href="add_entry.php">Add Catalog Entry</a></li>
             <li class = "nav-item"><a class = "nav-link" href="add_bag_entry.php">Add Bag Log Entry</a></li>
             <li class = "nav-item"><a class = "nav-link" href="references.php">References</a></li>
+            <li class = "nav-item"><a class = "nav-link" href="recently_deleted_database.php">Recently Deleted</a></li>
             <li class = "nav-item"><a class = "nav-link" href="front_page_maintenance.php">Front Page Maintenance</a></li>
         </ul>
     </div>

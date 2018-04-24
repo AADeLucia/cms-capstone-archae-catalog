@@ -14,10 +14,11 @@ include "connect_to_database.php";
 if(isset($_GET['id'])){
   // Get id value
   $id =  "'" . $_GET['id'] . "'";
-  $sql = "DELETE FROM catalog WHERE full_catalog_number=$id";
+  $sql = "INSERT INTO recently_deleted SELECT *,CURDATE() FROM catalog WHERE full_catalog_number= $id;";
+  $sql .= "DELETE FROM catalog WHERE full_catalog_number=$id;";
 
   // Delete the entry
-  if($result = $conn->query($sql)){
+  if($result = $conn->multi_query($sql)){
     echo "Element " . $id . " has been deleted.";
     echo "<br />";
     echo "<a class='btn btn-primary' href='index.php' role='button'>Go to Full Catalog</a>";
