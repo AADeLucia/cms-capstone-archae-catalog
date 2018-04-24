@@ -1,4 +1,6 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 include "head.php";
 echo "<head><title>Add to Reference Table</title><style>body{background-color: white;};</style></head>";
 $target_dir= "../media/carousel/";
@@ -10,6 +12,7 @@ $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
 //Check if image file is a actual image or fake image
 if(isset($_POST["submit"])){
   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+  echo $_FILES["fileToUpload"]["tmp_name"];
   if($check !== false){
     echo "File is an image - " . $check["mime"] . ".";
     $uploadOk = 1;
@@ -42,7 +45,7 @@ if($uploadOk == 0){
   echo "Sorry, your file was not uploaded.";
 // If everything is okay, try to upload file
 } else{
-  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)){
+  if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"].".jpg", $target_file)){
     echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
     echo "<br />";
     echo "<a class='btn btn-primary' href='front_page_maintenance.php' role='button'>Return to Front Page Maintenance</a>";
