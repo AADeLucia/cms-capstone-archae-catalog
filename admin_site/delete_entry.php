@@ -14,7 +14,7 @@ include "connect_to_database.php";
 if(isset($_GET['id'])){
   // Get id value
   $id =  "'" . $_GET['id'] . "'";
-  $sql = "INSERT INTO recently_deleted SELECT *,CURDATE() FROM catalog WHERE full_catalog_number='Test';";
+  $sql = "INSERT INTO recently_deleted SELECT *,CURDATE() FROM catalog WHERE full_catalog_number= $id;";
   $sql .= "DELETE FROM catalog WHERE full_catalog_number=$id;";
 
   // Delete the entry
