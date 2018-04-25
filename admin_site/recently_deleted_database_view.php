@@ -35,7 +35,7 @@ if($result = $conn->query($sql)){
                         <h4 class=\"modal-title\">Are you sure?</h4>
                       </div>
                       <div class=\"modal-body\">
-                        Are you sure you want to delete?
+                        Are you sure you want to restore?
                       </div>
                       <div class=\"modal-footer\">
                         <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Close</button>

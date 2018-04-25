@@ -22,7 +22,7 @@ if(isset($_GET['id'])){
 
   // Restore the entry
   if($result = $conn->multi_query($sql)){
-    echo "Element " . $id . " has been restore.";
+    echo "Element " . $id . " has been restored.";
     echo "<br/>";
     echo "<a class='btn btn-primary' href='index.php' role='button'>Go to Full Catalog</a>";
   } else {
