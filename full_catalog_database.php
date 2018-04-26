@@ -1,14 +1,5 @@
 <?php
-//include "local_db_access.php";
-include "remote_db_access.php";
-
-//Create connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-//Check connection
-if ($conn->connect_error){
-    die("Connection failed: " .$conn->connect_error);
-}
+include "connect_to_database.php";
 
 // Attempt select query execution
 $sql = "SELECT * FROM catalog";
@@ -34,8 +25,8 @@ if($result = $conn->query($sql)){
               echo "<ul class=\"list-group list-group-flush\">";
               echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Surface Treatment</span>: " . $row['surface_treatment'] . "</li>";
               echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Modification</span>: " . $row['modification'] . "</li>";
-              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Count</span>: " . $row['count_(n)'] . "</li>";
-              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Weight</span>: " . $row['weight_(g)'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Count</span>: " . $row['count'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Weight</span>: " . $row['weight'] . "</li>";
               echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Culture Type</span>: " . $row['culture_type'] . "</li>";
               echo "</ul>";
             echo "</div>";

@@ -107,13 +107,13 @@
     <div class="col">
       <div class="form-group">
         <label for="count">Count (n)</label>
-        <input type="number" class="form-control" name="count_(n)">
+        <input type="number" class="form-control" name="count">
       </div>
     </div>
     <div class="col">
       <div class="form-group">
         <label for="weight">Weight (g)</label>
-        <input type="number" class="form-control" name="weight_(g)">
+        <input type="number" class="form-control" name="weight">
       </div>
     </div>
     <div class="col">
