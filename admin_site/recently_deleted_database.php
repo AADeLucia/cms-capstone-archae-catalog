@@ -2,7 +2,7 @@
 <html>
     <?php include 'head.php';?>
     <head>
-        <title>Full Catalog</title>
+        <title>Recently Deleted</title>
     </head>
 <body>
     <?php include 'rollins_header.php';?>
