@@ -2,7 +2,7 @@
 <html>
     <?php include 'head.php';?>
     <head>
-        <title>Front Page Maintenance</title>
+        <title>Maintenance</title>
     </head>
 <body>
     <?php include 'rollins_header.php';?>
