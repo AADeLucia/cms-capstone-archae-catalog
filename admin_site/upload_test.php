@@ -11,8 +11,9 @@ if(!getimagesize($_FILES['file_upload']['tmp_name'])){
 }
 
 // Check filetype
-if($_FILES['file_upload']['type'] != 'image/png' || $_FILES['file_upload']['type'] != 'image/jpeg'){
-    die('Unsupported filetype uploaded. Only allow png and jpg.');
+$ext = $_FILES['file_upload']['type'];
+if($ext != 'image/png' && $ext != 'image/jpeg' && $ext != 'image/gif'){
+    die('Unsupported filetype uploaded. Only allow png, jpg, and gif.');
 }
 
 // Check filesize
@@ -30,5 +31,10 @@ if(!move_uploaded_file($_FILES['file_upload']['tmp_name'], $target_dir . $_FILES
     die('Error uploading file - check destination is writeable.');
 }
 
-die('File uploaded successfully.');
+// Uploaded successfully
+echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
+echo "<br />";
+echo "<a class='btn btn-primary' href='front_page_maintenance.php' role='button'>Return to Front Page Maintenance</a>";
+
+//die('File uploaded successfully.');
 ?>
