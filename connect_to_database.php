@@ -1,5 +1,5 @@
 <?php
-$local = True;
+$local = False;
 
 if ($local){
   $servername = "localhost";

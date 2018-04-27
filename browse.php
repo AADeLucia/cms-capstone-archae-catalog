@@ -55,7 +55,7 @@
                   <label for="surface_treatment">Surface Treatment</label>
                   <select multiple name="surface_treatments[]" class="form-control">
                     <option selected>---All---</option>
-                    <?php $table="surface_treatments"; $column="treatment_name"; include "fill_select_option.php"; ?>
+                    <?php $table="surface_treatments"; $column="surface_treatment_name"; include "fill_select_option.php"; ?>
                   </select>
                 </div>
                 <div class="form-group col">
