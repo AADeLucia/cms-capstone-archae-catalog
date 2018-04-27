@@ -14,17 +14,14 @@
       </div>
 
       <div class="col-lg-10 col-md-11 col-sm-11 col-xs-11" id="content_section">
-        <h3>Update Carousel Photos</h3>
-
-        <form action= "upload.php?dir=../media/carousel/" method="post" enctype="multipart/form-data">
-          Select image to upload:
-          <input type="file" name="fileToUpload" id="fileToUpload">
-          <input type="submit" value="Upload Image" name="submit">
-        </form>
+        <h4>Add Image to Carousel</h4>
         <form method='post' enctype='multipart/form-data' action='upload_test.php'>
-          File: <input type='file' name='file_upload'>
-          <input type='submit'>
+          Select Image to Upload: <input type='file' name='file_upload'>
+          <input class='btn btn-primary' type='submit'>
         </form>
+        <br>
+        <h4>Delete Image from Carousel</h4>
+        <br>
         <?php include "display_photos.php";?>
       </div>
     </div>
