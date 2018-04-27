@@ -3,14 +3,17 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 include "head.php";
 echo "<head><title>Add to Reference Table</title><style>body{background-color: white;};</style></head>";
-$target_dir= "../media/carousel/";
+$target_dir= "/var/www/html/media/carousel/";
 //$target_dir = $_GET['dir'];
-$target_file= $target_dir . basename($_FILES["fileToUpload"]["name"]);
+$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+echo "target file: $target_file <br>";
+
 $uploadOk = 1;
 $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
-
+echo "image file type: " . $imageFileType . "<br>";
 //Check if image file is a actual image or fake image
 if(isset($_POST["submit"])){
+  echo "temp name: ". $_FILES["fileToUpload"]["tmp_name"] . "<br>";
   $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
   echo $_FILES["fileToUpload"]["tmp_name"];
   if($check !== false){
@@ -43,7 +46,7 @@ if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg
 //Check if $uploadOk is set to 0 by an error
 if($uploadOk == 0){
   echo "Sorry, your file was not uploaded.";
-// If everything is okay, try to upload file
+  // If everything is okay, try to upload file
 } else{
   if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"].".jpg", $target_file)){
     echo "The file " . basename($_FILES["fileToUpload"]["name"]) . " has been uploaded.";
@@ -51,6 +54,7 @@ if($uploadOk == 0){
     echo "<a class='btn btn-primary' href='front_page_maintenance.php' role='button'>Return to Front Page Maintenance</a>";
   } else {
     echo "Sorry, there was an error uploading your file.";
+    print_r($_FILES);
   }
 }
 ?>
