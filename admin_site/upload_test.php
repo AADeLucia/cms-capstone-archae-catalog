@@ -1,5 +1,5 @@
 <?php
-$target_dir = "/var/www/html/media/carousel";
+$target_dir = "/var/www/html/media/carousel/";
 
 // Check for errors
 if($_FILES['file_upload']['error'] > 0){
@@ -11,8 +11,8 @@ if(!getimagesize($_FILES['file_upload']['tmp_name'])){
 }
 
 // Check filetype
-if($_FILES['file_upload']['type'] != 'image/png'){
-    die('Unsupported filetype uploaded.');
+if($_FILES['file_upload']['type'] != 'image/png' || $_FILES['file_upload']['type'] != 'image/jpeg'){
+    die('Unsupported filetype uploaded. Only allow png and jpg.');
 }
 
 // Check filesize
