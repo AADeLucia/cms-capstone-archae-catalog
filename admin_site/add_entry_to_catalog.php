@@ -17,12 +17,8 @@ foreach ($_POST as $key => $value){
 }
 // Check for file upload
 if ($_FILES["photograph_file"]["size"]!=0){
-  $insert_values["photograph_file"] = "'" .$insert_values['full_catalog_number']. "." .pathinfo($_FILES['photograph_file']['name'], PATHINFO_EXTENSION). "'";
+  $insert_values["photograph_file"] = substr($insert_values['full_catalog_number'],-1). "." .pathinfo($_FILES['photograph_file']['name'], PATHINFO_EXTENSION). "'";
 }
-
-echo "insert values: <br>";
-print_r($insert_values);
-echo "<br>";
 
 // Prepare insert statement
 $sql = "INSERT into catalog (";
@@ -42,11 +38,8 @@ $sql = "INSERT into catalog (";
 
     // Upload photo
     if (array_key_exists('photograph_file', $insert_values)){
-      echo "in photo inlcude if<br>";
       include "upload_artifact_photo.php";
-      echo "included file with function<br>";
       echo upload_artifact_photo($_FILES, $insert_values['photograph_file']);
-      echo "after function ran<br>";
     }
     echo "<a class='btn btn-primary' href='index.php' role='button'>Go to Full Catalog</a>";
     echo "<a class='btn btn-primary' href='add_entry.php' role='button'>Add another entry</a>";
