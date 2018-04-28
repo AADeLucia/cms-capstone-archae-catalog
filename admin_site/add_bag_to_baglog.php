@@ -8,7 +8,7 @@ include "connect_to_database.php";
 $insert_values = array();
 foreach ($_POST as $key => $value){
   if(!empty($value)){
-    if($key=="collection_issue" || $key=="photographed"){
+    if($key=="issue"){
       $insert_values[$key] = '1';
     } else {
       $insert_values[$key] = "'" . $value . "'";

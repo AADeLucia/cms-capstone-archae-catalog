@@ -5,7 +5,8 @@
         <title>Browse</title>
     </head>
 <body>
-    <?php include 'rollins_header.php';?>
+    <?php include 'php_routing.php'; ?>
+    <?php include 'rollins_header.php'; ?>
 
     <div id="body_content" class="container-fluid">
         <div class="row">
