@@ -38,19 +38,13 @@
   </div>
   <div class="col">
     <div class="form-group">
-      <label for="associated_provenience">Associated Provenience</label>
-      <input type="text" class="form-control" id="associated_provenience">
+      <label for="level_inches">Level (inches)</label>
+      <input type="text" class="form-control" id="level_inches">
     </div>
   </div>
 </div>
 
 <div class="row">
-  <div class="col">
-    <div class="form-group">
-      <label for="level_inches">Level (inches)</label>
-      <input type="text" class="form-control" id="level_inches">
-    </div>
-  </div>
   <div class="col">
     <div class="form-group">
       <label for="provenience_type">Provenience Type</label>
@@ -61,6 +55,12 @@
     <div class="form-group">
       <label for="recovery_inches">Recovery (inches)</label>
       <input type="number" class="form-control" id="recovery_inches">
+    </div>
+  </div>
+  <div class="col">
+    <div class="form-group">
+      <label for="associated_provenience">Associated Provenience</label>
+      <input type="text" class="form-control" id="associated_provenience">
     </div>
   </div>
 </div>
