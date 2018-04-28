@@ -1,35 +1,43 @@
 <?php
 function upload_artifact_photo($FILES, $target_name, $target_dir = "/var/www/html/media/artifacts/"){
-  output = "Image upload error: ";
+  echo "in function<br>";
+  print_r($FILES);
+  $output = "Image upload error: ";
 
   // Check for errors
   if($FILES['photograph_file']['error'] > 0){
-      return output .= 'An error ocurred when uploading your image.<br>';
+      $output .= 'An error ocurred when uploading your image.<br>';
+      return $output;
   }
 
   if(!getimagesize($FILES['photograph_file']['tmp_name'])){
-      return output .= 'Please ensure you are uploading an image file.<br>';
+      $output .= 'Please ensure you are uploading an image file.<br>';
+      return $output;
   }
 
   // Check filetype
   $ext = $FILES['photograph_file']['type'];
   if($ext != 'image/png' && $ext != 'image/jpeg' && $ext != 'image/gif'){
-      return output .= 'Unsupported filetype uploaded. Only allow png, jpg, and gif.<br>';
+      $output .= 'Unsupported filetype uploaded. Only allow png, jpg, and gif.<br>';
+      return $output;
   }
 
   // Check filesize
   if($FILES['photograph_file']['size'] > 80000000){
-      return output .= 'File uploaded exceeds maximum upload size.';
+      $output .= 'File uploaded exceeds maximum upload size.<br>';
+      return $output;
   }
 
   // Check if the file exists
   if(file_exists($target_dir . $FILES['photograph_file']['name'])){
-      return output .= 'File with that name already exists.<br>';
+    $output .= 'File with that name already exists.<br>';
+    return $output;
   }
 
   // Upload file
   if(!move_uploaded_file($FILES['photograph_file']['tmp_name'], $target_dir . $FILES['photograph_file']['name'])){
-      return output .= 'Error uploading file - check destination is writeable.<br>';
+    $output .= 'Error uploading file - check destination is writeable.<br>';
+    return $output;
   }
 
   // Uploaded successfully
