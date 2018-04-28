@@ -14,6 +14,7 @@
 
             <ul class="nav flex-column submenu">
               <li class = "nav-item"><a class = "nav-link" href="add_bag_entry.php">Add Bag Entry</a></li>
+              <li class = "nav-item"><a class = "nav-link" href="print_bag_tag.php">Print Bag Tag</a></li>
             </ul>
 
             <li class = "nav-item"><a class = "nav-link" href="references.php">References</a></li>
