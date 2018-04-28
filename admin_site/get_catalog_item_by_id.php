@@ -1,5 +1,5 @@
 <?php
-include "connect_to_database.php";
+include "../connect_to_database.php";
 
 // Prepare
 $sql = "SELECT * FROM catalog WHERE full_catalog_number=". "\"". $catalog_number ."\"";

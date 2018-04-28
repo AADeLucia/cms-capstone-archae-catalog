@@ -3,14 +3,6 @@
     <?php include 'head.php';?>
     <head>
         <title>Browse</title>
-        <!--
-        <script>
-        $(document).ready(function(){
-          $("search_submit").click(function(){
-            $("#browse_results").text("This works!");
-          });
-        });
-      </script-->
     </head>
 <body>
     <?php include 'rollins_header.php';?>
@@ -63,7 +55,7 @@
                   <label for="surface_treatment">Surface Treatment</label>
                   <select multiple name="surface_treatments[]" class="form-control">
                     <option selected>---All---</option>
-                    <?php $table="surface_treatments"; $column="treatment_name"; include "fill_select_option.php"; ?>
+                    <?php $table="surface_treatments"; $column="surface_treatment_name"; include "fill_select_option.php"; ?>
                   </select>
                 </div>
                 <div class="form-group col">
@@ -102,6 +94,7 @@
                 else if(isset($_POST["browse_submit"])){
                   // Save select form values into array
                   $default_select = "---All---";
+                  $is_empty = True;
                   $selections = array("material"=>$_POST["materials"],
                   "material_type"=>$_POST["material_types"], "form"=>$_POST["forms"],
                 "surface_treatment"=>$_POST["surface_treatments"], "modification"=>$_POST["modifications"],
@@ -111,6 +104,8 @@
                 foreach ($selections as $key => $val){
                   if ($val[0] == $default_select){
                     $selections[$key] = NULL;
+                  } else {
+                    $is_empty = False;
                   }
                 }
                 // Display results

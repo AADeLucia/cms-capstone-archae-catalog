@@ -160,7 +160,7 @@
                     </div>
                   </div>
                 </div>
-                <?php $table = "surface_treatments"; $col = "treatment_name"; include "references_table.php";?>
+                <?php $table = "surface_treatments"; $col = "surface_treatment_name"; include "references_table.php";?>
               </div>
             </div>
           </div>

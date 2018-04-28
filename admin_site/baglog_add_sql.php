@@ -1,5 +1,5 @@
 <?php
-include "connect_to_database.php";
+include "../connect_to_database.php";
 
 $full_baglog_num = $_POST['full_baglog_num']);
 $common_name = $_POST['common_name']);

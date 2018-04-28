@@ -1,6 +1,6 @@
 <?php
 // Build forms
-include "connect_to_database.php";
+include "../connect_to_database.php";
 $sql = "SELECT * FROM " .$table ;
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){

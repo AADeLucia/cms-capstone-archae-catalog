@@ -10,9 +10,9 @@ echo "Returned " . $result->num_rows . " rows";
           // Use image if provided image
           // else use default
           if ($row['photographed']){
-            echo "<img class=\"catalog_thumbnail\" src=\"artifact_images/".$row['photograph_file']."\">";
+            echo "<img class='catalog_thumbnail' src='media/artifacts/" .$row['photograph_file']. "'>";
           } else {
-            echo "<img class=\"catalog_thumbnail\" src=\"media/rollins_crest.png\">";
+            echo "<img class='catalog_thumbnail' src='media/rollins_crest.png'>";
           }
           echo "</div>";
           echo "<div class=\"col\">";
@@ -28,8 +28,8 @@ echo "Returned " . $result->num_rows . " rows";
             echo "<ul class=\"list-group list-group-flush\">";
             echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Surface Treatment</span>: " . $row['surface_treatment'] . "</li>";
             echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Modification</span>: " . $row['modification'] . "</li>";
-            echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Count</span>: " . $row['count_(n)'] . "</li>";
-            echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Weight</span>: " . $row['weight_(g)'] . "</li>";
+            echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Count</span>: " . $row['count'] . "</li>";
+            echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Weight</span>: " . $row['weight'] . "</li>";
             echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Culture Type</span>: " . $row['culture_type'] . "</li>";
             echo "</ul>";
           echo "</div>";

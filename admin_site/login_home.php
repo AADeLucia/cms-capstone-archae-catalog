@@ -13,7 +13,7 @@
           <form action = "login.php" method = "post" class = "form-container">
             <div class="form-group">
               <label for="Username">Username</label>
-              <input type="text" class="form-control" name="user" placeholder="Username">
+              <input type="text" class="form-control" name="user" placeholder="Username" autocomplete="off">
             </div>
             <div class="form-group">
               <label for="Password">Password</label>

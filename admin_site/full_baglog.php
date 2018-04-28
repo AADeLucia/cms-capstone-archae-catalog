@@ -1,5 +1,5 @@
 <?php
-include "connect_to_database.php";
+include "../connect_to_database.php";
 
 // Attempt select query execution
 $sql = "SELECT * FROM baglog";
