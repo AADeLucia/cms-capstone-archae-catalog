@@ -2,7 +2,8 @@
 <html>
 <?php include 'head.php';?>
 <head>
-  <title>Maintenance</title>
+  <title>Print Bag Tag</title>
+  <link rel="stylesheet" type="text/css" href="css/print_stylesheet.css" media="print"/>
 </head>
 <body>
   <?php include 'rollins_header.php';?>
@@ -14,15 +15,7 @@
       </div>
 
       <div class="col-lg-10 col-md-11 col-sm-11 col-xs-11" id="content_section">
-        <h4>Add Image to Carousel</h4>
-        <form method='post' enctype='multipart/form-data' action="upload_carousel.php">
-          Select Image to Upload: <input type='file' name='file_upload'>
-          <input class='btn btn-primary' type='submit'>
-        </form>
-        <br>
-        <h4>Delete Image from Carousel</h4>
-        <br>
-        <?php include "display_photos.php";?>
+        <?php include 'bag_tag_view.php';?>
       </div>
     </div>
   </div>

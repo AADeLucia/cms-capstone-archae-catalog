@@ -1,7 +1,7 @@
 <?php
 $id= "'" . $_GET['id'] . "'";
-include "connect_to_database.php";
-//Prepare
+include "../connect_to_database.php";
+// Prepare
 $sql = "SELECT * FROM catalog WHERE full_catalog_number=$id";
 echo "SQL: $sql <br>";
 $current_values = array();

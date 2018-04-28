@@ -8,13 +8,13 @@ include "head.php";
 echo "<head><title>Delete Entry</title><style>body{background-color: white;};</style></head>";
 
 // Connect to the database
-include "connect_to_database.php";
+include "../connect_to_database.php";
 
 // Check if the 'id' variable is set in URL, and check that it is valid
 if(isset($_GET['id'])){
   // Get id value
   $id =  "'" . $_GET['id'] . "'";
-  $sql = "INSERT INTO recently_deleted SELECT *,CURDATE() FROM catalog WHERE full_catalog_number= $id;";
+  $sql = "INSERT INTO recently_deleted SELECT *,CURRENT_TIMESTAMP() FROM catalog WHERE full_catalog_number= $id;";
   $sql .= "DELETE FROM catalog WHERE full_catalog_number=$id;";
 
   // Delete the entry

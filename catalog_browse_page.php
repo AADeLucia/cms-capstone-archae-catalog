@@ -55,7 +55,7 @@
                   <label for="surface_treatment">Surface Treatment</label>
                   <select multiple name="surface_treatments[]" class="form-control">
                     <option selected>---All---</option>
-                    <?php $table="surface_treatments"; $column="treatment_name"; include "fill_select_option.php"; ?>
+                    <?php $table="surface_treatments"; $column="surface_treatment_name"; include "fill_select_option.php"; ?>
                   </select>
                 </div>
                 <div class="form-group col">
@@ -88,7 +88,7 @@
               // Show catalog item search results
                 if(isset($_POST["search_submit"])){
                   $catalog_number = $_POST["catalog_number"];
-                  include 'get_catalog_item_by_id.php';
+                  include 'catalog_query_by_id.php';
                 }
               // Show browse results
                 else if(isset($_POST["browse_submit"])){
@@ -109,7 +109,7 @@
                   }
                 }
                 // Display results
-                  include 'browse_database.php';
+                  include 'catalog_browse_query.php';
                 }?>
             </div>
 

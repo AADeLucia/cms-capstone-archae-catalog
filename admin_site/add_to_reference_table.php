@@ -1,7 +1,7 @@
 <?php
 include "head.php";
 echo "<head><title>Add to Reference Table</title><style>body{background-color: white;};</style></head>";
-include "connect_to_database.php";
+include "../connect_to_database.php";
 
 // Create insert statement
 $table = $_GET['table'];

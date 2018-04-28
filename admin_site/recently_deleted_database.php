@@ -2,7 +2,7 @@
 <html>
     <?php include 'head.php';?>
     <head>
-        <title>Full Catalog</title>
+        <title>Recently Deleted</title>
     </head>
 <body>
     <?php include 'rollins_header.php';?>
@@ -15,7 +15,7 @@
 
     <div class="col-lg-10 col-md-11 col-sm-11 col-xs-11" id="content_section">
       <?php
-      include "connect_to_database.php";
+      include "../connect_to_database.php";
 
       //Create connection
       $conn = new mysqli($servername, $username, $password, $database);

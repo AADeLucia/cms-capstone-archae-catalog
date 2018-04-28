@@ -1,5 +1,5 @@
 <?php
-include "connect_to_database.php";
+include "../connect_to_database.php";
 
 if ($is_empty){
   $sql = "SELECT * FROM catalog";

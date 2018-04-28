@@ -1,4 +1,5 @@
 <?php
+include 'head.php';
 if($result = $conn->query($sql)){
 echo "Returned " . $result->num_rows . " rows";
     if($result->num_rows > 0){
@@ -10,9 +11,9 @@ echo "Returned " . $result->num_rows . " rows";
           // Use image if provided image
           // else use default
           if ($row['photographed']){
-            echo "<img class=\"catalog_thumbnail\" src=\"artifact_images/".$row['photograph_file']."\">";
+            echo "<img class='catalog_thumbnail' src='media/artifacts/" .$row['photograph_file']. "'>";
           } else {
-            echo "<img class=\"catalog_thumbnail\" src=\"media/rollins_crest.png\">";
+            echo "<img class='catalog_thumbnail' src='media/rollins_crest.png'>";
           }
           echo "</div>";
           echo "<div class=\"col\">";
@@ -32,6 +33,9 @@ echo "Returned " . $result->num_rows . " rows";
             echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Weight</span>: " . $row['weight'] . "</li>";
             echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Culture Type</span>: " . $row['culture_type'] . "</li>";
             echo "</ul>";
+          echo "</div>";
+          echo "<div class=\"col\">";
+          echo "<a href=# class=\"btn btn-primary\">Request</a>";
           echo "</div>";
           echo "</div>";
           echo "</div>";

@@ -32,7 +32,7 @@
 
             </div>
             <div class="col" id="contact_form_side">
-              <form name="contact_form" method="post" action="send_form_email.php">
+              <form name="contact_form" method="post" action="contact_send_email.php">
               <table width="450px">
               <tr>
                <td valign="top">

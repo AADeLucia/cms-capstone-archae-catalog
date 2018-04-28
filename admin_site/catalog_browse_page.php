@@ -87,7 +87,7 @@
           // Show catalog item search results
           if(isset($_POST["search_submit"])){
             $catalog_number = $_POST["catalog_number"];
-            include 'get_catalog_item_by_id.php';
+            include 'catalog_query_by_id.php';
           }
           // Show browse results
           else if(isset($_POST["browse_submit"])){
@@ -107,7 +107,7 @@
               }
             }
             // Display results
-            include 'browse_database.php';
+            include 'catalog_browse_query.php';
           }?>
         </div>
       </div>
