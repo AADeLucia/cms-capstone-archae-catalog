@@ -15,7 +15,7 @@
 
       <div class="col-lg-10 col-md-11 col-sm-11 col-xs-11" id="content_section">
         <h4>Add Image to Carousel</h4>
-        <form method='post' enctype='multipart/form-data' action='upload_test.php'>
+        <form method='post' enctype='multipart/form-data' action="upload_carousel.php">
           Select Image to Upload: <input type='file' name='file_upload'>
           <input class='btn btn-primary' type='submit'>
         </form>

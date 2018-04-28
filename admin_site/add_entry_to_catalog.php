@@ -36,8 +36,10 @@ $sql = "INSERT into catalog (";
     echo "<a class='btn btn-primary' href='add_entry.php' role='button'>Add another entry</a>";
 
     // Upload photo
-
-
+    print_r($_FILE);
+    include "upload_artifact_photo.php";
+    $upload_status = upload_artifact_photo($_FILE);
+    echo $upload_status;
   } else{
     echo "<br />ERROR: Could not execute \"$sql\". " . $conn->error;
   }

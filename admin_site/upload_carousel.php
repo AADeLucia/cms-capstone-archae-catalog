@@ -1,6 +1,7 @@
 <?php
 include "head.php";
 echo "<head><title>Upload Page</title><style>body{background-color: white;};</style></head>";
+
 $target_dir = "/var/www/html/media/carousel/";
 
 // Check for errors
