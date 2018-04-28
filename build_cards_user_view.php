@@ -10,9 +10,9 @@ echo "Returned " . $result->num_rows . " rows";
           // Use image if provided image
           // else use default
           if ($row['photographed']){
-            echo "<img class=\"catalog_thumbnail\" src=\"artifact_images/".$row['photograph_file']."\">";
+            echo "<img class='catalog_thumbnail' src='media/artifacts/'" .$row['photograph_file']. "'>";
           } else {
-            echo "<img class=\"catalog_thumbnail\" src=\"media/rollins_crest.png\">";
+            echo "<img class='catalog_thumbnail' src='media/rollins_crest.png'>";
           }
           echo "</div>";
           echo "<div class=\"col\">";

@@ -1,6 +1,6 @@
 <?php
 function upload_artifact_photo($FILES, $target_name, $target_dir = "/var/www/html/media/artifacts/"){
-  $output = "Image upload error with $FILES['photograph_file']['name']: ";
+  $output = "Image upload error with " .$FILES['photograph_file']['name']. ": ";
 
   // Check for errors
   if($FILES['photograph_file']['error'] > 0){
