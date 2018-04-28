@@ -1,0 +1,9 @@
+/**Page Formatting**/
+@page {
+  size: A4 landscape;
+}
+
+.card{
+  width:4in;
+  height:3in;
+}

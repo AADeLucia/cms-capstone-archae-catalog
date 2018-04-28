@@ -1,4 +1,4 @@
-<nav class = "sidebar">
+<nav class = "sidebar d-print-none">
     <div class="sidebar-sticky">
         <ul class = "nav flex-column">
             <!-- <li class = "nav-item active"><a class = "nav-link" href="index.php">Home</a></li> -->
