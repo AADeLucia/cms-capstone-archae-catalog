@@ -7,11 +7,13 @@ if($result = $conn->query($sql)){
       //Begin table
       echo "<table id=\"catalog_browse\" class=\"table\">";
       // Print columns
-      $raw_columns = array_slice($result->fetch_fields(), 1); // Get rid of "ID column"
+      $raw_columns = $result->fetch_fields();
       $columns = array();
       foreach ($raw_columns as $col){
-        $formatted_name = ucwords(str_replace("_", " ", $col->name));
-        $columns[] = array('field'=>$col->name, 'name'=>$formatted_name);
+        if ($col->name != 'id'){
+          $formatted_name = ucwords(str_replace("_", " ", $col->name));
+          $columns[] = array('field'=>$col->name, 'name'=>$formatted_name);
+        }
       }
 
       //Print header names
