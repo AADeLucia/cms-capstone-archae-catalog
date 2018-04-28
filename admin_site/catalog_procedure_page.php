@@ -12,7 +12,6 @@
           <div class="col-lg-2 col-md-1 col-sm-1 col-xs-1" id="sidebar_section">
             <?php include 'admin_nav_bar.php';?>
           </div>
-
           <div class="col-lg-10 col-md-11 col-sm-11 col-xs-11" id="content_section">
             <h1>Catalog Procedure</h1>
               <h5><u>You will need:</u></h5>
@@ -63,10 +62,6 @@
                 <li>Use the microscope whenever you need to, especially when deciphering temper types for pottery.</li>
                 <li>Leave time at the end of your session for cleanup, wiping down tables, putting away all materials, sweeping the floor, and labeling all of your trays clearly.</li>
               </ul>
-
-
-
-
           </div>
     </div>
     </div>

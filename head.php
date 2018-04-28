@@ -20,4 +20,5 @@
 
     <!-- Our styles -->
     <link rel="stylesheet" href="css/stylesheet.css">
+    <?php include "../dev_config.php"; ?>
 </head>

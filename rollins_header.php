@@ -1,4 +1,4 @@
-<div class = "jumbotron jumbotron-fluid">
+<div class = "jumbotron jumbotron-fluid d-print-none">
     <div id="head_container" class="container-fluid">
         <div class="row align-items-center">
             <div class="col-lg-10 col-md-9 col-sm-12 col-xs-12">
