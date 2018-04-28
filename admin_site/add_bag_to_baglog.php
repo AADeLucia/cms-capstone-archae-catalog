@@ -1,7 +1,7 @@
 <?php
 include "head.php";
 echo "<head><title>Add to Reference Table</title><style>body{background-color: white;};</style></head>";
-include "connect_to_database.php";
+include "../connect_to_database.php";
 
 // Get Variables
 // IMPORTANT: Store variables in same order as columns in table
@@ -17,7 +17,7 @@ foreach ($_POST as $key => $value){
 }
 
 // Prepare insert statement
-$sql = "INSERT into catalog (";
+$sql = "INSERT into baglog (";
   foreach($insert_values as $key => $val){
   $sql .= $key . ",";
   }
@@ -30,14 +30,10 @@ $sql = "INSERT into catalog (";
 
   // Execute statement
   if($result=$conn->query($sql)){
-    echo "Entry was successfully added.";
-    echo "<br />";
-    echo "<a class='btn btn-primary' href='index.php' role='button'>Go to Full Catalog</a>";
-    echo "<a class='btn btn-primary' href='add_entry.php' role='button'>Add another entry</a>";
+    echo "Entry was successfully added.<br>";
 
-    // Upload photo
-
-
+    echo "<a class='btn btn-primary' href='baglog_browse.php' role='button'>Go to Full Catalog</a>";
+    echo "<a class='btn btn-primary' href='add_bag.php' role='button'>Add another entry</a>";
   } else{
     echo "<br />ERROR: Could not execute \"$sql\". " . $conn->error;
   }
