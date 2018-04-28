@@ -9,7 +9,7 @@
       $user = $_POST['user'];
       $pass = $_POST['pass'];
 
-      include "connect_to_database.php";
+      include "../connect_to_database.php";
 
       $stmt = "SELECT * from users WHERE pass='$pass' AND user='$user'";
 

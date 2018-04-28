@@ -8,7 +8,7 @@ include "head.php";
 echo "<head><title>Restore Entry</title><style>body{background-color: white;};</style></head>";
 
 // Connect to the database
-include "connect_to_database.php";
+include "../connect_to_database.php";
 
 // Check if the 'id' variable is set in URL, and check that it is valid
 if(isset($_GET['id'])){

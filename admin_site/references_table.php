@@ -1,5 +1,5 @@
 <?php
-include "connect_to_database.php";
+include "../connect_to_database.php";
 
 $sql = "SELECT * FROM " .$table . " ORDER BY  " . $col  ;
 if($result = $conn->query($sql)){
