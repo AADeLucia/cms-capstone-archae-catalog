@@ -1,5 +1,5 @@
 <?php
-function upload_artifact_photo($FILE, $target_dir = "/var/www/html/media/artifacts/"){
+function upload_artifact_photo($FILES, $target_name, $target_dir = "/var/www/html/media/artifacts/"){
   output = "Image upload error: ";
 
   // Check for errors
@@ -33,6 +33,6 @@ function upload_artifact_photo($FILE, $target_dir = "/var/www/html/media/artifac
   }
 
   // Uploaded successfully
-  return "The file " . basename($FILES["fileToUpload"]["name"]) . " has been uploaded.<br>";
+  return "The file " . basename($FILES['photograph_file']["name"]) . " has been uploaded.<br>";
 }
 ?>

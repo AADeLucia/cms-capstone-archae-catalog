@@ -10,7 +10,11 @@ foreach ($_POST as $key => $value){
   if(!empty($value)){
     if($key=="collection_issue" || $key=="photographed"){
       $insert_values[$key] = '1';
-    } else {
+    }
+    if ($key=="photograph_file"){
+      $insert_values[$key] = $_POST['full_catalog_number'] . pathinfo($_FILES['photograph_file']['name'], PATHINFO_EXTENSION);
+    }
+    else {
       $insert_values[$key] = "'" . $value . "'";
     }
   }
@@ -30,15 +34,15 @@ $sql = "INSERT into catalog (";
 
   // Execute statement
   if($result=$conn->query($sql)){
-    echo "Entry was successfully added.";
-    echo "<br />";
-    echo "<a class='btn btn-primary' href='index.php' role='button'>Go to Full Catalog</a>";
-    echo "<a class='btn btn-primary' href='add_entry.php' role='button'>Add another entry</a>";
+    echo "Entry was successfully added.<br>";
 
     // Upload photo
     include "upload_artifact_photo.php";
-    $upload_status = upload_artifact_photo($_FILES);
+    $upload_status = upload_artifact_photo($_FILES, $insert_values['photograph_file']);
     echo $upload_status;
+
+    echo "<a class='btn btn-primary' href='index.php' role='button'>Go to Full Catalog</a>";
+    echo "<a class='btn btn-primary' href='add_entry.php' role='button'>Add another entry</a>";
   } else{
     echo "<br />ERROR: Could not execute \"$sql\". " . $conn->error;
   }
