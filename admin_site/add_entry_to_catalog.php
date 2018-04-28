@@ -3,8 +3,8 @@ include "head.php";
 echo "<head><title>Add to Reference Table</title><style>body{background-color: white;};</style></head>";
 include "../connect_to_database.php";
 
-// Get Variables
-// IMPORTANT: Sore variables in same order as columns in table
+// Get passed variables
+// Store in key value array for easy insert statement building
 $insert_values = array();
 foreach ($_POST as $key => $value){
   if(!empty($value)){
@@ -17,8 +17,12 @@ foreach ($_POST as $key => $value){
 }
 // Check for file upload
 if ($_FILES["photograph_file"]["size"]!=0){
-  $insert_values[$key] = "'" .$_POST['full_catalog_number']. "." .pathinfo($_FILES['photograph_file']['name'], PATHINFO_EXTENSION). "'";
+  $insert_values["photograph_file"] = "'" .$insert_values['full_catalog_number']. "." .pathinfo($_FILES['photograph_file']['name'], PATHINFO_EXTENSION). "'";
 }
+
+echo "insert values: <br>";
+print_r($insert_values);
+echo "<br>";
 
 // Prepare insert statement
 $sql = "INSERT into catalog (";
