@@ -1,6 +1,6 @@
 /**Page Formatting**/
 @page {
-  size: A4 landscape;
+  size:landscape;
 }
 
 .card{
