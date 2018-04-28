@@ -14,7 +14,7 @@
           </div>
 
     <div class="col-lg-10 col-md-11 col-sm-11 col-xs-11" id="content_section">
-      <?php include 'full_catalog_database.php';?>
+      <?php include 'full_catalog_query.php';?>
   </div>
 </div>
 </div>

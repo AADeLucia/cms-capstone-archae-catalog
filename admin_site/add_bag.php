@@ -14,7 +14,7 @@
           </div>
           <div class="col" id="content_section">
             <!-- Content Here -->
-            <?php include 'bag_entry_form.php';?>
+            <?php include 'add_bag_form.php';?>
           </div>
         </div>
     </div>
