@@ -17,7 +17,7 @@ foreach ($_POST as $key => $value){
 }
 // Check for file upload
 if ($_FILES["photograph_file"]["size"]!=0){
-  $insert_values[$key] = $_POST['full_catalog_number'] . pathinfo($_FILES['photograph_file']['name'], PATHINFO_EXTENSION);
+  $insert_values[$key] = "'"$_POST['full_catalog_number'] .".". pathinfo($_FILES['photograph_file']['name'], PATHINFO_EXTENSION)."'";
 }
 
 // Prepare insert statement
