@@ -32,9 +32,6 @@ $sql = "INSERT into catalog (";
   }
   $sql = substr($sql, 0, -1) . ")"; // remove last comma
 
-echo $sql . "<br>";
-return;
-
   // Execute statement
   if($result=$conn->query($sql)){
     echo "Entry was successfully added.<br>";
