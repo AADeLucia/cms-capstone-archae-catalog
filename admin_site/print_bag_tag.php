@@ -3,6 +3,7 @@
 <?php include 'head.php';?>
 <head>
   <title>Print Bag Tag</title>
+  <link rel="stylesheet" type="text/css" href="css/print_stylesheet.css" media="print"/>
 </head>
 <body>
   <?php include 'rollins_header.php';?>

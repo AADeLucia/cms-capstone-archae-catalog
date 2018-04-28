@@ -5,7 +5,7 @@ $sql= "SELECT * FROM baglog";
 if($result = $conn->query($sql)){
     if($result->num_rows > 0){
         while($row = $result->fetch_array()){
-          echo "<div class=\"card w-100\">";
+          echo "<div class=\"card\">";
           echo "<div class=\"container\">";
           echo "<div class=\"row align-items-center\">";
           echo "<div class=\"col\">";

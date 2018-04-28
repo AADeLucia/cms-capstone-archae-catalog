@@ -120,6 +120,12 @@ ul.nav.flex-column{
   text-align: center;
 }
 
+.btn-primary{
+  background-color: #1b2e84;
+  border-color: #fff;
+  align-self: center;
+}
+
 /*** Forms ***/
 div.form-group.col {
   text-align: center;
