@@ -23,7 +23,7 @@ if($result = $conn->query($sql)){
           //Add modification buttons
           $id = $row['full_catalog_number'];
           echo "<td><a href='#' data-toggle=\"modal\" data-target='#myModal" . $id . "' class=\"btn btn-primary\">Delete</a></td>";
-          echo "<td><a href='edit_entry_form.php?id=" . $id. "' class=\"btn btn-primary\">Edit</a></td>";
+          echo "<td><a href='edit_catalog_entry.php?id=" . $id. "' class=\"btn btn-primary\">Edit</a></td>";
 
           // Modal for confirmation of delete
 

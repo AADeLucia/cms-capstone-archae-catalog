@@ -14,7 +14,9 @@
           </div>
           <div class="col" id="content_section">
             <!-- Content Here -->
-            <?php include 'edit_entry_form.php';?>
+            <?php $id = "'" . $_GET['id'] . "'" ;
+            include "edit_entry_form.php";
+            ?>
           </div>
         </div>
     </div>
