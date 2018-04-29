@@ -4,6 +4,7 @@ if($result = $conn->query($sql)){
 echo "Returned " . $result->num_rows . " rows";
     if($result->num_rows > 0){
         while($row = $result->fetch_array()){
+          $id = $row['full_catalog_number'];
           echo "<div class=\"card w-100\">";
           echo "<div class=\"container\">";
           echo "<div class=\"row align-items-center\">";
@@ -18,7 +19,7 @@ echo "Returned " . $result->num_rows . " rows";
           echo "</div>";
           echo "<div class=\"col\">";
             echo "<ul class=\"list-group list-group-flush\">";
-              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Catalog Number</span>: " . $row['full_catalog_number'] . "</li>";
+              echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Catalog Number</span>: " . $id . "</li>";
               echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Material</span>: " . $row['material'] . "</li>";
               echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Material Type</span>: " . $row['material_type'] . "</li>";
               echo "<li class=\"list-group-item\"><span class=\"catalog_field\">Form</span>: " . $row['form'] . "</li>";
