@@ -24,6 +24,7 @@ if($result = $conn->query($sql)){
 
           //Add modification buttons
           $id = $row['full_catalog_number'];
+          $date = $row['date_deleted'];
           echo "<td><a href='#' data-toggle=\"modal\" data-target=\"#myModal" . $id . "\"class=\"btn btn-primary\">Restore</a></td>";
 
           // Modal for confirmation of restore
@@ -39,7 +40,7 @@ if($result = $conn->query($sql)){
                       </div>
                       <div class=\"modal-footer\">
                         <button type=\"button\" class=\"btn btn-primary\" data-dismiss=\"modal\">Close</button>
-                        <a href= 'restore_entry.php?id=" . $id . "' class=\"btn btn-primary\">Restore</a>
+                        <a href= 'restore_entry.php?id=" . $id ."&date=" . $date ."' class=\"btn btn-primary\">Restore</a>
                       </div>
                     </div>
                   </div>
