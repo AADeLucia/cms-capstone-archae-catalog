@@ -71,7 +71,7 @@
         <label for="surface_treatment">Surface Treatment</label>
         <select id="surface_treatment" name="surface_treatment" class="form-control">
           <option value="">None</option>
-          <?php $table="surface_treatments"; $column="treatment_name"; include "fill_select_option.php"; ?>
+          <?php $table="surface_treatments"; $column="surface_treatment_name"; include "fill_select_option.php"; ?>
         </select>
       </div>
     </div>

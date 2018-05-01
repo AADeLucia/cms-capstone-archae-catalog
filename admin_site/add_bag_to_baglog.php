@@ -32,7 +32,7 @@ $sql = "INSERT into baglog (";
   if($result=$conn->query($sql)){
     echo "Entry was successfully added.<br>";
 
-    echo "<a class='btn btn-primary' href='baglog_browse.php' role='button'>Go to Full Catalog</a>";
+    echo "<a class='btn btn-primary' href='baglog_browse.php' role='button'>Go to Bag Log</a>";
     echo "<a class='btn btn-primary' href='add_bag.php' role='button'>Add another entry</a>";
   } else{
     echo "<br />ERROR: Could not execute \"$sql\". " . $conn->error;

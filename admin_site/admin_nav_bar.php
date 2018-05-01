@@ -19,6 +19,7 @@
             <li class = "nav-item"><a class = "nav-link" href="references.php">References</a></li>
             <li class = "nav-item"><a class = "nav-link" href="catalog_procedure_page.php">Catalog Procedure</a></li>
             <li class = "nav-item"><a class = "nav-link" href="front_page_maintenance.php">Maintenance</a></li>
+            <li class = "nav-item"><a class = "nav-link" href="../index.php">Logout</a></li>
         </ul>
     </div>
 </nav>
