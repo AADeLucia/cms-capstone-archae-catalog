@@ -3,20 +3,13 @@ $id=  $_GET['id'];
 include "../connect_to_database.php";
 
 // Prepare
-$sql = "SELECT * FROM catalog WHERE full_catalog_number=$id";
-echo "SQL: $sql <br>";
+$sql = "SELECT * FROM catalog WHERE full_catalog_number='$id'";
 $current_values = array();
 if($result = $conn->query($sql)){
   $rows = $result->fetch_array(MYSQLI_ASSOC);
-  echo "Printing result: <br>";
-  print_r($rows);
-  echo "hi";
   } else{
        echo "<br />ERROR: Could not execute \"$sql\". " . $conn->error ;
       }
-echo $row[decoration];
-$decoration = $row[decoration];
-echo $decoration;
 ?>
 
 <h1>Edit Catalog Entry</h1>
