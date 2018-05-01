@@ -27,7 +27,7 @@ $insert_values = array();
    }
   $sql = substr($sql, 0, -2); // remove last comma
   $sql .= " WHERE full_catalog_number=$id;";
-  echo $sql;
+  //echo $sql;
   // Execute statement
    if($result=$conn->query($sql)){
      echo "Entry was successfully updated.<br>";
