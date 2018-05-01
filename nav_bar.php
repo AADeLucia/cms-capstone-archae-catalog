@@ -3,8 +3,8 @@
         <ul class = "nav flex-column">
             <li class = "nav-item active"><a class = "nav-link" href="index.php">Home</a></li>
             <li class = "nav-item"><a class = "nav-link" href="full_catalog_page.php">Full Catalog</a></li>
-            <li class = "nav-item"><a class = "nav-link" href=catalog_browse_page.php">Browse</a></li>
-            <li class = "nav-item"><a class = "nav-link" href="contact_form.php">Contact</a></li>
+            <li class = "nav-item"><a class = "nav-link" href="catalog_browse_page.php">Browse</a></li>
+            <li class = "nav-item"><a class = "nav-link" href="contact_page.php">Contact</a></li>
             <li class = "nav-item"><a class = "nav-link" href="admin_site/login_home.php">Admin Login</a></li>
         </ul>
     </div>
