@@ -1,4 +1,6 @@
 <?php
+include "head.php";
+echo "<head><title>Add to Reference Table</title><style>body{background-color: white;};</style></head>";
 // Check if email was entered in form
 if(isset($_POST['email'])) {
 
@@ -82,6 +84,9 @@ mail($email_to, $email_subject, $email_message, $headers, '-f rcal@rollins.edu')
 
 Thank you for contacting us. We will be in touch with you very soon!
 
+
 <?php
+echo "<br>";
+echo "<a class='btn btn-primary' href='index.php' role='button'>Go to Home Page</a>";
 }
 ?>
