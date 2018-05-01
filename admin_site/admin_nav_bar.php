@@ -5,7 +5,7 @@
             <li class = "nav-item"><a class = "nav-link" href="index.php">Catalog</a></li>
 
             <ul class="nav flex-column submenu">
-              <li class = "nav-item"><a class = "nav-link" href=catalog_browse_page.php">Browse</a></li>
+              <li class = "nav-item"><a class = "nav-link" href="catalog_browse_page.php">Browse</a></li>
               <li class = "nav-item"><a class = "nav-link" href="add_entry.php">Add Catalog Entry</a></li>
               <li class = "nav-item"><a class = "nav-link" href="recently_deleted_database.php">Recently Deleted</a></li>
             </ul>
