@@ -7,7 +7,7 @@ if(isset($_POST['email'])) {
     // EDIT THE 2 LINES BELOW AS REQUIRED
     $email_to = "abaxter@rollins.edu";
     $server_email ="rcal@rollins.edu";
-    $email_subject = "RCAL Collection Request";
+    $email_subject = "RCAL Collections Request";
 
     function died($error) {
         // your error code can go here
